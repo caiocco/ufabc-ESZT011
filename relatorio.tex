@@ -1,130 +1,875 @@
-%%
-%% Copyright (c) 2001, 2009, 2010 The American Physical Society.
-%%
-%% See the REVTeX 4 README file for restrictions and more information.
-%%
-%To achieve the polarity reversal, several techniques have already been employed:
-%magnetic field bursts6, oscillating perpendicular magnetic fields7 and %in-plane rotating magnetic field8, among others. We decided to employ a %rotating magnetic field due to the low intensity of the applied field and %the frequency selectivity available in the process, i.e., the vortex core %will only reverse for a well-defined range of field frequencies12. It was %also noted that the gyrotropic frequency decreased for increasing values of %K.
-
-
-% This is a template for producing manuscripts for use with REVTEX 4.0
-% Copy this file to another name and then work on that file.
-% That way, you always have this original template file to use.
+% Trabalho de Política Habitacional
 %
-% Group addresses by affiliation; use superscriptaddress for long
-% author lists, or if there are many overlapping affiliations.
-% For Phys. Rev. appearance, change preprint to twocolumn.
-% Choose pra, prb, prc, prd, pre, prl, prstab, prstper, or rmp for journal
-% Add 'draft' option to mark overfull boxes with black boxes
-% Add 'showpacs' option to make PACS codes appear
-% Add 'showkeys' option to make keywords appear
-%\documentclass[aps,prb,showpacs,reprint,groupedaddress]{revtex4-1}
-%\documentclass[aps,showpacs,prl,preprint,superscriptaddress]{revtex4-1}
-% Originalmente estava assim:
-%\documentclass[nofootinbib,aps,reprint,superscriptaddress]{revtex4}
-% Eu resolvi deixar assim:
-\documentclass[hidelinks,a4paper,nofootinbib,aps,reprint,superscriptaddress,twocolumn]{revtex4}
-\linespread{1.4}
-
-%\documentclass[showpacs,aip,apl,twocolumn,groupedaddress]{revtex4-1}
-%\documentclass[aps,showpacs,apl,twocolumn,reprint,groupedaddress]{revtex4-1}
-%\documentclass[nature,twocolumn,reprint,groupedaddress]{revtex4-1}
-% You should use BibTeX and apsrev.bst for references
-% Choosing a journal automatically selects the correct APS
-% BibTeX style file (bst file), so only uncomment the line
-% below if necessary.
-%\bibliographystyle{apsrev4-1}
-\bibliographystyle{abntex2-num}
-
-\usepackage{graphicx}
-%\usepackage{mathscr}
-\usepackage{amsmath,amsfonts}
-\usepackage{xcolor}
-\usepackage{lineno}
-\definecolor{Red}{rgb}{0.9,0.0,0.1}
-\definecolor{Blue}{rgb}{0.1,0.1,0.9}
-%\usepackage{tabulary}
-%\usepackage{subfigure}%
-\hyphenation{ma-the-ma-tics e-qui-li-bri-um Bourdieu Ginzburg Adorno Lacey Bradbury Latour Mauss Rosenberg}
-
-\usepackage[brazil]{babel}
-
-\usepackage[utf8]{inputenc}
+% Abaixo seguem orientações originais do modelo utilizado.
+%
+% Siga para o conteúdo do trabalho descendo até a linha 970
+%
+% ==============================================================
+%
+% Modelo para monografia de final de curso, em conformidade
+% com normas da ABNT implementadas pelo projeto abntex2.
+%
+% Este arquivo é fortemente baseado em exemplo distribuído no
+% mesmo projeto. O projeto abntex2 pode ser acessado pela página
+% http://abntex2.googlecode.com/
+%
+% Este arquivo pode ser rodado tanto com o pdflatex quanto com
+% o lualatex.  Como contém referências bibliográficas a serem
+% processadas pelo programa bibtex, este programa deve ser
+% executado. Em resumo, a ordem de execução deve ser:
+% rodar primeiro o pdflatex (ou o lualatex), depois o bibtex e,
+% a seguir, o pdflatex (ou o lualatex ) novamente mais duas vezes,
+% para assegurar que todas as referências bibliográficas e 
+% citações estejam atualizadas.
+%
+% Para adaptar os textos para uso pessoal, usar os comandos
+% imediatamente antes do \begin{document} (iniciando com o
+% comando \titulo).  
+%
+% Este modelo está adaptado para monografias de final de curso
+% em matemática da UFRJ, mas, com o uso das variáveis, pode ser
+% usado para outros tipos de trabalho (mestrado, doutorado),
+% outros cursos, universidades etc.  Caso a adaptação das
+% variáveis não seja suficiente, pode-se alterar os comandos
+% imprimircapa, imprimirfolhaderosto e imprimiraprovação, 
+% fazendo as alterações necessárias.  Como os comandos definidos
+% neste texto usam somente LaTeX, a sua adaptação deve ser 
+% simples, bastando algum conhecimento de LaTeX.
+%
+% O restante do preâmbulo provavelmente  não necessitará ser
+% alterado, a menos, eventualmente, das opções de chamada da
+% classe abntex2, que estão definidas a seguir.
+% 
+\documentclass[ 
+% -- opções da classe memoir que é a classe base da abntex2 --
+% tamanho da fonte
+12pt,
+% capítulos começam em pág ímpar. Insere pág vazia, se preciso
+openright,
+% para imprimir uma página por folha ou visualização em video 
+oneside,
+% frente e verso. Margens das pag. ímpares diferem das pares.
+%  twoside,
+% tamanho do papel. 
+a4paper,
+% Caio - Ocultando bordas horríveis em hiperligações
+hidelinks,
+% -- opções da classe abntex2 --
+% títulos de capítulos convertidos em letras maiúsculas
+%  chapter=TITLE,
+% títulos de seções convertidos em letras maiúsculas
+%  section=TITLE,
+% títulos de subseções convertidos em letras maiúsculas
+%  subsection=TITLE,
+% títulos de subsubseções convertidos em letras maiúsculas
+%  subsubsection=TITLE,
+% -- opções do pacote babel --
+english,   % idioma adicional para hifenização
+portuguese,   % o último idioma é o principal do documento
+oldfontcommands,
+]{abntex2}
+%
+% ==============================================================
+%
+% --------------------------------------------------------------
+% Adicionando pacotes para recursos adicionais e defindo opções
+% pertinentes
+% --------------------------------------------------------------
+%
+% cabeçalho comum para uso com lualatex ou pdflatex
+\usepackage{ifluatex}
+% opções para uso com o lualatex
+\ifluatex
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+% o fonte small caps é diferente no latin modern
+\fontspec[SmallCapsFont={Latin Modern Roman Caps}]{Latin Modern Roman}
+% pacotes da AMS 
+\usepackage{amsmath,amsthm} 
+% pacote para fonte específico para símbolos matemáticos
+\usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
+% latin modern tem simbolos de mathbb muito feios.
+%  Trocar o fonte para estes simbolos.
+\setmathfont[range=\mathbb]{Tex Gyre Pagella Math}
+% opções para uso com o pdflatex
+\else
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{etoolbox}
+% pacotes da AMS 
+\usepackage{amsmath,amssymb,amsthm} 
+% Mapear caracteres especiais no PDF
+\usepackage{cmap}
+\fi
 
-\usepackage{natbib}
-\usepackage[autostyle]{csquotes}  
+% pacotes usados tanto pelo lualatex quanto pelo pdflatex
+\usepackage{lastpage}    % Usado pela Ficha catalográfica
+\usepackage{indentfirst} % Indenta primeiro parágrafo 
+\usepackage{color}       % Controle das cores
+\usepackage{graphicx}    % Inclusão de gráficos
+\usepackage{wrapfig}     % gráficos ao redor do texto
+% pacote para ajustar os fontes em cada linha de forma a
+% respeitar as margens
+\usepackage{microtype}
+% permite a gravação de texto em um arquivo indicado a partir
+% deste arquivo.  Originalmente foi usado para criar o arquivo
+% .bib com conteúdo de exemplo, evitando a edição de um arquivo
+% .bib somente para a bibliografia
+\usepackage{filecontents}
 
+% Caio - diagramas
+% http://www.texample.net/tikz/examples/smart-priority/
+%\usepackage{smartdiagram}
+
+% Caio - ladeando imagens
+% https://tex.stackexchange.com/questions/57433/cannot-use-caption-under-minipage
+\usepackage{caption}
+
+% Caio - preciso de tabelas longas
+% http://www.tex.ac.uk/FAQ-figurehere.html
+\usepackage{longtable}
+
+% Caio - tentando melhorar o posicionamento das imagens
+\usepackage{float}
+
+% Caio - corrigindo espaçamento conforme http://tex.stackexchange.com/questions/5683/how-to-remove-top-and-bottom-whitespace-of-longtable
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+% Caio - preciso de plotagens
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.8}
+
+% Caio - quero usar letras nas listas do enumerate conforme https://tex.stackexchange.com/questions/2291/how-do-i-change-the-enumerate-list-format-to-use-letters-instead-of-the-defaul
+\usepackage{enumitem}
+
+% Caio - modo paisagem para tabelões
+\usepackage{lscape}
+
+% Caio - adicionando o pacote hyperref
 \usepackage{hyperref}
+% - e definindo metadados do PDF e comportamento dos links
 \hypersetup{
-	pdftitle    = {Atividade},
-	pdfsubject  = {MTI},
-	pdfauthor   = {Caio César Carvalho Ortega},
-	pdfcreator  = {Caio César Carvalho Ortega},
-	pdfproducer = {Caio César Carvalho Ortega},
-	pdfkeywords = {atividade}
+	%pagebackref=true,
+	pdftitle={Relatório de Política Habitacional}, 
+	pdfauthor={Vários},
+	pdfsubject={Política Habitacional},
+	colorlinks=false,      		% false: boxed links; true: colored links
+	linkcolor=blue,          	% color of internal links
+	citecolor=blue,        		% color of links to bibliography
+	filecolor=magenta,      	% color of file links
+	urlcolor=blue,
+	bookmarksdepth=4
 }
 
+% Caio - separação silábica
+%\hyphenation{}
 
-\makeatletter
-\newcommand*{\citenst}[2][]{%
-	\begingroup
-	\let\NAT@mbox=\mbox
-	\let\@cite\NAT@citenum
-	\let\NAT@space\NAT@spacechar
-	\let\NAT@super@kern\relax
-	\renewcommand\NAT@open{[}%
-	\renewcommand\NAT@close{]}%
-	\cite[#1]{#2}%
-	\endgroup
+% Caio - citações mais poderosas
+%\usepackage[autostyle]{csquotes}
+
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+% Caio - habilitar glossário
+\usepackage{glossaries}
+\makeglossaries
+
+% \newglossaryentry{ex}{name={sample},description={an example}}
+\newglossaryentry{abl}{
+	name={ABL},
+	description={Área Bruta Locável}
 }
-\makeatother
 
-\listfiles
+\newglossaryentry{auj}{
+	name={AUJ},
+	description={Aglomeração Urbana de Jundiaí}
+}
 
+\newglossaryentry{condephaat}{
+	name={CONDEPHAAT},
+	description={Conselho de Defesa do Patrimônio Histórico, Arqueológico, Artístico e Turístico}
+}
+
+\newglossaryentry{cptm}{
+	name={CPTM},
+	description={Companhia Paulista de Trens Metropolitanos}
+}
+
+\newglossaryentry{cmsp}{
+	name={CMSP},
+	description={Companhia do Metropolitano de São Paulo}
+}
+
+\newglossaryentry{embraesp}{
+	name={Embraesp},
+	description={Empresa Brasileira de Estudos de Patrimônio}
+}
+
+\newglossaryentry{emtu}{
+	name={EMTU},
+	description={Empresa Metropolitana de Transportes Urbanos de São Paulo S.A}
+}
+
+\newglossaryentry{emplasa}{
+	name={Emplasa},
+	description={Empresa Paulista de Planejamento Metropolitano S/A}
+}
+
+\newglossaryentry{luos}{
+	name={LUOS},
+	description={Lei de Uso de Ocupação do Solo}
+}
+
+\newglossaryentry{mdu}{
+	name={MDU},
+	description={Média por Dia Útil}
+}
+
+\newglossaryentry{ouc}{
+	name={OUC},
+	description={Operação Urbana Consorciada}
+}
+
+\newglossaryentry{pde}{
+	name={PDE},
+	description={Plano Diretor Estratégico}
+}
+
+\newglossaryentry{pl}{
+	name={PL},
+	description={Projeto de Lei}
+}
+
+\newglossaryentry{rmsp}{
+	name={RMSP},
+	description={Região Metropolitana de São Paulo}
+}
+
+\newglossaryentry{sapavel}{
+	name={SAPAVEL},
+	description={Sistema de Áreas Protegidas, Áreas Verdes e Espaços Livres}
+}
+
+\newglossaryentry{smdu}{
+	name={SMDU},
+	description={Secretaria Municipal de Desenvolvimento Urbano da Prefeitura de São Paulo}
+}
+
+\newglossaryentry{ac1}{
+	name={AC-1},
+	description={Clubes esportivos sociais}
+}
+
+\newglossaryentry{ac2}{
+	name={AC-2},
+	description={Clubes de campo e clubes náuticos}
+}
+
+\newglossaryentry{zc}{
+	name={ZC},
+	description={Zona Centralidade}
+}
+
+\newglossaryentry{zczeis}{
+	name={ZC-ZEIS},
+	description={Zona Centralidade lindeira à ZEIS}
+}
+
+\newglossaryentry{zca}{
+	name={ZCa},
+	description={Zona Centralidade Ambiental}
+}
+
+\newglossaryentry{zcor1}{
+	name={ZCOR-1},
+	description={Zona Corredor 1}
+}
+
+\newglossaryentry{zcor2}{
+	name={ZCOR-2},
+	description={Zona Corredor 2}
+}
+
+\newglossaryentry{zcor3}{
+	name={ZCOR-3},
+	description={Zona Corredor 3}
+}
+
+\newglossaryentry{zcora}{
+	name={ZCORa},
+	description={Zona Corredor Ambiental}
+}
+
+\newglossaryentry{zde1}{
+	name={ZDE-1},
+	description={Zona de Desenvolvimento Econômico 1}
+}
+
+\newglossaryentry{zde2}{
+	name={ZDE-2},
+	description={Zona de Desenvolvimento Econômico 2}
+}
+
+\newglossaryentry{zeis1}{
+	name={ZEIS-1},
+	description={Zona Especial de Interesse Social 1}
+}
+
+\newglossaryentry{zeis2}{
+	name={ZEIS-2},
+	description={Zona Especial de Interesse Social 2}
+}
+
+\newglossaryentry{zeis3}{
+	name={ZEIS-3},
+	description={Zona Especial de Interesse Social 3}
+}
+
+\newglossaryentry{zeis4}{
+	name={ZEIS-4},
+	description={Zona Especial de Interesse Social 4}
+}
+
+\newglossaryentry{zeis5}{
+	name={ZEIS-5},
+	description={Zona Especial de Interesse Social 5}
+}
+
+\newglossaryentry{zem}{
+	name={ZEM},
+	description={Zona Eixo de Estruturação Transformação Metropolitana}
+}
+
+\newglossaryentry{zemp}{
+	name={ZEMP},
+	description={Zona Eixo de Estruturação Transformação Metropolitana Previsto}
+}
+
+\newglossaryentry{zep}{
+	name={ZEP},
+	description={Zona Especial de Preservação}
+}
+
+\newglossaryentry{zepam}{
+	name={ZEPAM},
+	description={Zona Especial de Proteção Ambiental}
+}
+
+\newglossaryentry{zer1}{
+	name={ZER-1},
+	description={Zona Exclusivamente Residencial 1}
+}
+
+\newglossaryentry{zer2}{
+	name={ZER-2},
+	description={Zona Exclusivamente Residencial 2}
+}
+
+\newglossaryentry{zera}{
+	name={ZERa},
+	description={Zona Exclusivamente Residencial Ambiental}
+}
+
+\newglossaryentry{zeu}{
+	name={ZEU},
+	description={Zona Eixo de Estruturação da Transformação Urbana}
+}
+
+\newglossaryentry{zeua}{
+	name={ZEUa},
+	description={Zona Eixo de Estruturação da Transformação Urbana Ambiental}
+}
+
+\newglossaryentry{zeup}{
+	name={ZEUP},
+	description={Zona Eixo de Estruturação da Transformação Previsto}
+}
+
+\newglossaryentry{zeupa}{
+	name={ZEUPa},
+	description={Zona Eixo de Estruturação da Transformação Previsto Ambiental}
+}
+
+\newglossaryentry{zm}{
+	name={ZM},
+	description={Zona Mista}
+}
+
+\newglossaryentry{zma}{
+	name={ZMa},
+	description={Zona Mista Ambiental}
+}
+
+\newglossaryentry{zmis}{
+	name={ZMIS},
+	description={Zona Mista de Interesse Social}
+}
+
+\newglossaryentry{zmisa}{
+	name={ZMISa},
+	description={Zona Mista de Interesse Social Ambiental}
+}
+
+\newglossaryentry{zoe}{
+	name={ZOE},
+	description={Zona de Ocupação Especial}
+}
+
+\newglossaryentry{zpds}{
+	name={ZPDS},
+	description={Zona de Preservação e Desenvolvimento Sustentável}
+}
+
+\newglossaryentry{zpdsr}{
+	name={ZPDSr},
+	description={Zona de Preservação e Desenvolvimento Sustentável da Zona Rural}
+}
+
+\newglossaryentry{zpi1}{
+	name={ZPI-1},
+	description={Zona Predominantemente Industrial 1}
+}
+
+\newglossaryentry{zpi2}{
+	name={ZPI-2},
+	description={Zona Predominantemente Industrial 1}
+}
+
+\newglossaryentry{zpr}{
+	name={ZPR},
+	description={Zona Predominantemente Residencial}
+}
+
+\newglossaryentry{pmsp}{
+	name={PMSP},
+	description={Prefeitura do Município de São Paulo}
+}
+
+\newglossaryentry{smpr}{
+	name={SMPR},
+	description={Secretaria Municipal de Prefeituras Regionais}
+}
+
+\newglossaryentry{smg}{
+	name={SMG},
+	description={Secretaria Municipal de Gestão}
+}
+
+\newglossaryentry{ibge}{
+	name={IBGE},
+	description={Instituto Brasileiro de Geografia e Estatística}
+}
+
+\newglossaryentry{gesp}{
+	name={GESP},
+	description={Governo do Estado de São Paulo}
+}
+
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+% Comandos para definir ambientes tipo teorema em português 
+\newtheorem{meuteorema}{Teorema}[chapter]
+\newtheorem{meuaxioma}{Axioma}[chapter]
+\newtheorem{meucorolario}{Corolário}[chapter]
+\newtheorem{meulema}{Lema}[chapter]
+\newtheorem{minhaproposicao}{Proposição}[chapter]
+\newtheorem{minhadefinicao}{Definição}[chapter]
+\newtheorem{meuexemplo}{Exemplo}[chapter]
+\newtheorem{minhaobservacao}{Observação}[chapter]
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+% Pacotes de citações
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}   % Citações padrão ABNT
+%\usepackage[num]{abntex2cite}  % Citações numéricas
+% --- 
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+	Nenhuma citação no texto.%
+	\or
+	Citado na página #2.%
+	\else
+	Citado #1 vezes nas páginas #2.%
+	\fi}%
+% --- 
+% --- 
+% Espaço em branco no início do parágrafo
+\setlength{\parindent}{1.3cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% ---
+% compila o indice, se este for incluído no texto
+\makeindex
+%
+% --------------------------------------------------------- 
+% ---------------------------------------------------------
+% Redefinindo o comando do abntex2 para gerar uma capa  
+\renewcommand{\imprimircapa}{%
+	\begin{capa}
+		\begin{flushleft} 
+			{\Large \textsc{\imprimirinstituicao  \\
+					\imprimircurso \\} }
+		\end{flushleft}
+		
+		\vfill
+		\begin{center}
+			{\large \imprimirautor} \\
+			{\Large \textit{\imprimirtitulo}}
+		\end{center}
+		
+		\vfill
+		\begin{center}
+			{\large{\imprimirlocal \\ \imprimirano  }}
+		\end{center}
+		\vspace*{1cm} 
+	\end{capa}
+	
+}
+
+% ---------------------------------------------------------
+% ---------------------------------------------------------
+%
+%
+% ---------------------------------------------------------
+% ---------------------------------------------------------
+% Redefinindo o comando para gerar uma folha de rosto 
+\renewcommand{\imprimirfolhaderosto}{%
+	\begin{center}
+		{\large \imprimirautor}
+	\end{center}
+	\vfill \vfill \vfill \vfill
+	\begin{center}
+		{\Large \textit{\imprimirtitulo}}
+	\end{center}
+	
+	\vfill \vfill \vfill 
+	\begin{flushright} 
+		\parbox{0.5\linewidth}{
+			\imprimirtipotrabalho\, relacionado ao 
+			\imprimircurso\, da \imprimirsigla\, 
+			entregue como parte do
+			processo de graduação para a obtenção do 
+			grau de \imprimirgrau.}
+	\end{flushright} 
+	
+	\vfill 
+	\begin{flushright} 
+		\parbox{0.5\linewidth}{ \imprimirorientadorRotulo 
+			\imprimirorientador\\ \imprimirttorientador}
+	\end{flushright} 
+	
+	\ifdefvoid{\imprimircoorientador}{}{
+		\begin{flushright} 
+			\parbox{0.5\linewidth}{ \imprimircoorientadorRotulo 
+				\imprimircoorientador\\ \imprimirttcoorientador}
+		\end{flushright}
+	}
+	
+	\vfill \vfill \vfill \vfill \vfill \vfill \vfill
+	\begin{center}
+		{\large{\imprimirlocal \\ \imprimirano}}
+	\end{center}
+	\vspace*{1cm} \newpage
+}
+% Final do comando para gerar uma folha de rosto 
+% ---------------------------------------------------------
+% ---------------------------------------------------------
+%
+%
+% ---------------------------------------------------------
+% ---------------------------------------------------------
+% Definindo o comando para gerar uma folha de defesa 
+\newcommand{\imprimirfolhadeaprovacao}{%
+	\begin{center}
+		{\large \imprimirautor}
+	\end{center}
+	\vfill \vfill \vfill \vfill
+	\begin{center}
+		{\Large \textit{\imprimirtitulo}}
+	\end{center}
+	
+	\vfill \vfill \vfill \vfill \vfill \vfill
+	\begin{flushright} 
+		\parbox{0.5\linewidth}{
+			%			\imprimirtipotrabalho\,apresentada ao 
+			%			\imprimircurso\, da \imprimirsigla\, como requisito
+			%			para a obtenção parcial do grau de \imprimirgrau.}
+		}
+	\end{flushright} 
+	\vfill \vfill \vfill \vfill
+	Aprovada em \data.
+	
+	\vfill \vfill \vfill \vfill
+	
+	\begin{center}
+		\textbf{BANCA EXAMINADORA}
+		
+		\vfill\vfill\vfill
+		\rule{10cm}{.1pt}\\
+		{\imprimirexaminadorum} \\ {\imprimirttexaminadorum}
+		
+		\ifdefvoid{\imprimirexaminadordois}{}{
+			\vfill\vfill
+			\rule{10cm}{.1pt}\\
+			\imprimirexaminadordois \\ \imprimirttexaminadordois }
+		
+		\ifdefvoid{\imprimirexaminadortres}{}{
+			\vfill\vfill
+			\rule{10cm}{.1pt}\\
+			\imprimirexaminadortres \\ \imprimirttexaminadortres }
+		
+		\ifdefvoid{\imprimirexaminadorquatro}{}{
+			\vfill\vfill
+			\rule{10cm}{.1pt}\\
+			\imprimirexaminadorquatro \\ \imprimirttexaminadorquatro }
+	\end{center}
+	
+	\vfill \vfill 
+	\begin{center}
+		{\large{\imprimirlocal \\ \imprimirano}}
+	\end{center}
+	\vspace*{1cm}
+	\newpage
+}
+% Final do comando para gerar uma folha de defesa 
+% ---------------------------------------------------------
+% --------------------------------------------------------
+%
+%
+%
+%
+%
+% ---------------------------------------------------------
+% --------------------------------------------------------
+% definindo variáveis adicionais 
+\providecommand{\imprimirsigla}{}
+\newcommand{\sigla}[1]{\renewcommand{\imprimirsigla}{#1}}
+%
+\providecommand{\imprimircurso}{}
+\newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
+%
+\providecommand{\imprimirano}{}
+\newcommand{\ano}[1]{\renewcommand{\imprimirano}{#1}}
+%
+\providecommand{\imprimirgrau}{}
+\newcommand{\grau}[1]{\renewcommand{\imprimirgrau}{#1}}
+%
+\providecommand{\imprimirexaminadorum}{}
+\newcommand{\examinadorum}[1]{
+	\renewcommand{\imprimirexaminadorum}{#1}}
+%
+\providecommand{\imprimirexaminadordois}{}
+\newcommand{\examinadordois}[1]{
+	\renewcommand{\imprimirexaminadordois}{#1}}
+%
+\providecommand{\imprimirexaminadortres}{}
+\newcommand{\examinadortres}[1]{
+	\renewcommand{\imprimirexaminadortres}{#1}}
+%
+\providecommand{\imprimirexaminadorquatro}{}
+\newcommand{\examinadorquatro}[1]{
+	\renewcommand{\imprimirexaminadorquatro}{#1}}
+%
+\providecommand{\imprimirttorientador}{}
+\newcommand{\ttorientador}[1]{
+	\renewcommand{\imprimirttorientador}{#1}} 
+%
+\providecommand{\imprimirttcoorientador}{}
+\newcommand{\ttcoorientador}[1]{
+	\renewcommand{\imprimirttcoorientador}{#1}}
+%
+\providecommand{\imprimirttexaminadorum}{}
+\newcommand{\ttexaminadorum}[1]{
+	\renewcommand{\imprimirttexaminadorum}{#1}}
+%
+\providecommand{\imprimirttexaminadordois}{}
+\newcommand{\ttexaminadordois}[1]{\renewcommand{
+		\imprimirttexaminadordois}{#1}}
+%
+\providecommand{\imprimirttexaminadortres}{}
+\newcommand{\ttexaminadortres}[1]{
+	\renewcommand{\imprimirttexaminadortres}{#1}}
+%
+\providecommand{\imprimirttexaminadorquatro}{}
+\newcommand{\ttexaminadorquatro}[1]{
+	\renewcommand{\imprimirttexaminadorquatro}{#1}}
+% fim da definição de variáveis adicionais
+% ---------------------------------------------------------
+% ---------------------------------------------------------
+%
+% ---
+% ---
+% ---
+% ---
+% ---
+% ---
+% ---
+% ---
+% ---
+% Informações de dados para CAPA, FOLHA DE ROSTO e FOLHA DE DEFESA
+%
+%----------------- Título e Dados do Autor -----------------
+\titulo{Relatório}
+\autor{Caio César Carvalho Ortega \and
+	Lucas Calefo \and
+	Raphael Honorato Ribeiro
+}
+%
+
+%----------Informações sobre a Instituição e curso -----------------
+\instituicao{Universidade Federal do ABC \\
+	Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas}
+%
+\sigla{UFABC}
+%
+\curso{Bacharelado em Planejamento Territorial}
+%\curso{Curso de Licenciatura em Matemática}
+%\curso{Mestrado em Ensino de Matemática}
+%\curso{Doutorado em Matemática}
+%
+\local{São Bernardo do Campo, SP}
+%
+%
+% -------- Informações sobre o tipo de documento
+\tipotrabalho{Relatório}
+%\tipotrabalho{Monografia de final de curso}
+%\tipotrabalho{Dissertação de mestrado}
+%\tipotrabalho{Tese de doutorado}
+%
+\grau{BACHAREL em Planejamento Territorial}
+%\grau{LICENCIADO em Matemática}
+%\grau{MESTRE em Matemática}
+%\grau{DOUTOR em Ciências}
+%
+\ano{2018}
+\data{13 de Junho de 2018} % data da aprovação
+%
+%------Nomes do Orientador, examinadores.  
+\orientador{Rosana Denaldi}
+%\coorientador{Antonio da Silva} % opcional
+\examinadorum{Rosana Denaldi}
+%\examinadordois{Ivo Fernandez Lopez}
+%\examinadortres{Jeferson Leandro Garcia de Araújo}
+%\examinadorquatro{Antonio da Silva}
+%
+%--------- Títulos do Orientador e examinadores ----
+%\ttorientador{Bacharel em Física - UEFS}
+%\ttcoorientador{Doutor em Matemática - UFRJ} 
+%\ttexaminadorum{Doutor em Matemática - UFRJ}
+%\ttexaminadordois{Doutor em Matemática - UFRJ}
+%\ttexaminadortres{Doutor em Matemática - UFRJ}
+%\ttexaminadorquatro{Doutor em Matemática - UFRJ}
+%
+% ---
+% ---
 \begin{document}
-	%\linenumbers
-	% Use the \preprint command to place your local institutional report
-	% number in the upper righthand corner of the title page in preprint mode.
-	% Multiple \preprint commands are allowed.
-	% Use the 'preprintnumbers' class option to override journal defaults
-	% to display numbers if necessary
-	%\preprint{}
 	
-	%Title of paper
-	\title{O caso do Cantinho do Céu: breve relatório de um esforço de urbanização}
+	% ---
+	% Chamando o comando para imprimir a capa
+	\imprimircapa
+	% ---
+	% ---
+	% Chamando o comando para imprimir a folha de rosto
+	%\imprimirfolhaderosto
+	% ---
+	% ---
+	% Chamando o comando para imprimir a folha de aprovação
+	%\imprimirfolhadeaprovacao
+	% ---
+	% ---
+	% Dedicatória
+	% ---
+	%	\begin{dedicatoria}
+	%  	 \vspace*{\fill}
+	%  	 \centering
+	%  	 \noindent
+	%  	 \textit{ Este trabalho é dedicado a todos que, com entusiasmo,\\
+	%  	 		sonham e lutam por XYZ no ABCDEFG\\
+	%  			do XPTO.} \vspace*{\fill}
+	%	\end{dedicatoria}
+	%	
+	%	
+	%	\begin{agradecimentos}
+	%	Orientação do modelo: insira aqui um parágrafo
+	%	\end{agradecimentos}
+	%	
+	%	
+	%
+	%---------------------- EPÍGRAFE I (OPCIONAL)--------------
+	%\begin{epigrafe}
+	%    \vspace*{\fill}
+	%    \begin{flushright}
+	%        \textit{''Texto''\\
+	%        Autor}
+	%    \end{flushright}
+	%\end{epigrafe}
+	%
+	%
+	%
+	%--------Digite aqui o seu resumo em %Português--------------
+	%\begin{resumo}
+	%   Descrição. 
+	%
+	%   \vspace{\onelineskip}
+	%   \noindent
+	%   \textbf{Palavras-chaves}: Palavras.
+	%\end{resumo}
 	
-	% repeat the \author .. \affiliation etc. as neededcitacao
-	% \email, \thanks, \homepage, \altaffiliation all apply to the current
-	% author. Explanatory text should go in the []'s, actual e-mail
-	% address or url should go in the {}'s for \email and \homepage.
-	% Please use the appropriate macro foreach each type of information
 	
-	% \affiliation command applies to all authors since the last
-	% \affiliation command. The \affiliation command should follow the
-	% other information
-	% \affiliation can be followed by \email, \homepage, \thanks as well.
-	%\author{}
+	%
+	% --- resumo em inglês (abstract) ---
+	%\begin{resumo}[Abstract]
+	%   \begin{otherlanguage*}{english}
+	%      Description.
+	%
+	%      \vspace{\onelineskip}
+	%      \noindent
+	%      \textbf{Keywords}: Words.
+	%   \end{otherlanguage*}
+	%\end{resumo}
 	
-	\affiliation{Universidade Federal do ABC, Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas, São Bernardo do Campo-SP, Brasil}
+	%
+	%----Sumário, lista de figuras e lista de tabelas ------------
+	\tableofcontents 
+	\newpage \listoffigures
+	\newpage \listoftables
+	%---------------------
+	%--------------Início do Conteúdo---------------------------
+	% o comando textual é obrigatório e marca o ponto onde começa 
+	% a imprimir o número da página
+	\textual
+	%
+	%---------------------
+	%
 	
-	\author{Caio César Carvalho Ortega, RA 21038515; Lucas Calefo, RA nnnnnnnn; Raphael Honorato Ribeiro, RA 11100809}
 	
-	%\date{\today}
+	%
+	% O conteúdo começa pra valer a seguir
+	%
 	
-	\maketitle
+	%
+	%===============================================================================
+	%
 	
-	\section{Prólogo}
+	\chapter{Prólogo}
 	
 	O propósito do presente trabalho é realizar um relatório acerca da reurbanização da área do Cantinho do Céu, na capital paulista, como parte das atividades que integram a disciplina de Política Habitacional (ESZT011).
 	
-	\section{Histórico}
+	\chapter{Histórico}
 	
-	Conforme Silva \cite[p.80]{Silva2016}:
+	Conforme \citeonline[p.80]{Silva2016}:
 	
-	\begin{quote}
+	\begin{citacao}
 		``A ocupação da área do cantinho do Céu, assim como a do Jardim Gaivotas, dá-se em definitivo a partir de 1988, segundo documento da Associação de Moradores do Parque Residencial Cocaia Independente, logo após o surgimento de loteamento Parque dos Lagos, e Lago Azul que aconteceu em 1987 e intensificou-se nos anos 1990, em um momento de grave crise econômica e grande desemprego no país''.
-	\end{quote}
+	\end{citacao}
 	
 	No entanto, Silva identificou a partir do contato com um morador local que no final dos anos 1960 a área ainda tinha características rurais \cite[p.80]{Silva2016}. As situações nas décadas seguinte se alteraria \cite[p.82]{Silva2016}:
 	
@@ -136,13 +881,143 @@
 	
 	Apesar da presença do transporte metroferroviário, Silva destaca a fragilidade do Cantinho do Céu \cite[p.98]{Silva2016}:
 	
-	\begin{quote}
-		``Muito embora o distrito do Grajaú tenha se desenvolvido muito em algumas de suas regiões, como, por exemplo, nas áreas próximas da linha férrea Estação Grajaú da Companhia Paulista de Transportes Metropolitanos (CPTM), nos bairros Jardim São Paulo, Parque América, ainda existem lugares de grande	precariedade e de espoliação urbano-ambiental, como é o caso de quase todo o bairro Cantinho do Céu e partes do próprio Grajaú (\dots)''.
-	\end{quote}
-
+	\begin{citacao}
+		``Muito embora o distrito do Grajaú tenha se desenvolvido muito em algumas de suas regiões, como, por exemplo, nas áreas próximas da linha férrea Estação Grajaú da \glsdesc{cptm} (\gls{cptm}), nos bairros Jardim São Paulo, Parque América, ainda existem lugares de grande	precariedade e de espoliação urbano-ambiental, como é o caso de quase todo o bairro Cantinho do Céu e partes do próprio Grajaú (\dots)''.
+	\end{citacao}
 	
-	\bibliography{fontes.bib}
+	%===============================================================================
+	%
 	
+	% ----------------------------------------------------------
+	% ----------------------------------------------------------
+	\postextual
+	
+	
+	
+	% informa o arquivo com a bibliografia. Deve ser o mesmo nome
+	% (sem o sufixo) que será informado no ambiente filecontents
+	% que está no final deste arquivo. Neste exemplo foi usado 
+	% bibitemp.bib e bibtemp. Este comando insere a bibliografia
+	% nesta posição (antes dos apêndices, anexos, índice remissivo)
+	\bibliography{fontes}
+	% ----------------------------------------------------------
+	% Glossário
+	% ----------------------------------------------------------
+	% Consultar manual da classe abntex2 para orientações sobre o
+	% uso do glossário.
+	\renewcommand{\glossaryname}{Glossário}
+	%\renewcommand{\glossarypreamble}{Esta é a descrição do glossário.\\ \\}
+	\renewcommand*{\glsseeformat}[3][\seename]{\textit{#1}
+		\glsseelist{#2}}
+	
+	% ---
+	% Traduções para o ambiente glossaries
+	% ---
+	\providetranslation{Glossary}{Glossário}
+	\providetranslation{Acronyms}{Siglas}
+	\providetranslation{Notation (glossaries)}{Notação}
+	\providetranslation{Description (glossaries)}{Descrição}
+	\providetranslation{Symbol (glossaries)}{Símbolo}
+	\providetranslation{Page List (glossaries)}{Lista de Páginas}
+	\providetranslation{Symbols (glossaries)}{Símbolos}
+	\providetranslation{Numbers (glossaries)}{Números} 
+	% ---
+	
+	% ---
+	% Imprime o glossário
+	% ---
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\glossaryname}
+	% \glossarystyle{index}
+	% \glossarystyle{altlisthypergroup}
+	\glossarystyle{tree}
+	\printglossaries
+	% ---
+	
+	% ----------------------------------------------------------
+	% Apêndices
+	% ----------------------------------------------------------
+	
+	% ---
+	% Inicia os apêndices. Não esquecer de fechar ao final de
+	% todos os apêndices (\end{apendicesenv})
+	% ---
+	%\begin{apendicesenv}
+	
+	% Imprime uma página indicando o início dos apêndices
+	%\partapendices
+	
+	% ----------------------------------------------------------
+	%\chapter{Primeiro apêndice}
+	% ----------------------------------------------------------
+	
+	%Este é um exemplo de inclusão de capítulos de %apêndice em uma 
+	%monografia.  Cada apêndice é tratado como se fosse %um capítulo.
+	%Os apêndices devem ser iniciados pelo comando de %ambiente
+	%\textbackslash begin\{apendicesenv\} e encerrados %pelo comando 
+	%\textbackslash end\{apendicesenv\}.
+	
+	% ----------------------------------------------------------
+	%\chapter{Segundo apêndice}
+	% ----------------------------------------------------------
+	
+	%Este é um exemplo de inclusão de um segundo apêndice. 
+	
+	%\end{apendicesenv}
+	% ---
+	
+	
+	% ----------------------------------------------------------
+	% Anexos
+	% ----------------------------------------------------------
+	
+	% ---
+	% Inicia os anexos
+	% ---
+	%\begin{anexosenv}
+	
+	% Imprime uma página indicando o início dos anexos
+	%\partanexos
+	
+	% ---
+	%\chapter{Anexo I}
+	% ---
+	%Os anexos são similares aos apêndices se distinguindo pelo fato
+	%que os apêndices são de autoria do autor da monografia e os 
+	%anexos não são da autoria do autor da monografia.  Por exemplo,
+	%se incluir no trabalho um modelo de um formulário preenchido
+	%por alunos participantes de uma pesquisa, este será um apêndice
+	%se o formulário foi criado pelo autor da monografia e será um
+	%anexo se o formulário tiver sido criado por outros (por exemplo,
+	%é um formulário padrão da escola em que o aluno que o preenche
+	%estuda).
+	%
+	%Mesmo que o formulário tenha sido elaborado pela escola, uma
+	%reprodução do formulário preenchido por cada aluno na pesquisa
+	%será incluído no apêndice pois envolve o trabalho do autor da
+	%monografia ao distribuir, coletar e reproduzir as respostas.
+	%
+	%Este é um exemplo de inclusão de capítulos de anexos em uma 
+	%monografia.  Cada anexo é tratado como se fosse um capítulo.
+	%Os anexos devem ser iniciados pelo comando de ambiente
+	%\textbackslash begin\{anexoenv\} e encerrados pelo comando 
+	%\textbackslash end\{anexoenv\}.
+	%
+	%\end{anexosenv}
+	% ---
+	%---------------------------------------------------------------------
+	%---------------------------------------------------------------------
+	
+	%\printindex
+	
+	% Por padrão são incluídas no trabalho somente as referências
+	% citadas ao longo do texto. No comando abaixo foram acrescentadas
+	% algumas referências não citadas (neste texto servem apenas como
+	% exemplos). Não deve ser usado o comando (mais simples) 
+	% \nocite{*}, pois este parece não ser compatível com o
+	% abntex2cite
+	%\nocite{abntex2cite,abntex2wiki,boyer,eves,iezzi,kletenic,
+	%        diomara,steinbruch,intusolatex,feynman,shannon,
+	%        luisfelipe,turing}
 \end{document}
-
-
