@@ -1,0 +1,116 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{0.7\textwidth}
+
+\definecolor{titlepagecolor}{cmyk}{8,0.5,1,0} % verde
+\definecolor{titlepagecolor2}{cmyk}{0,0.3,1,0} % amarelo
+\definecolor{titlepagecolor3}{cmyk}{0,.9,.9,.4} % vermelho
+\definecolor{titlepagecolor4}{cmyk}{1,.60,0,.40} % azul
+
+
+% \DeclareFixedFont {<cmd>} {<ENC>} {<family>} {<series>} {<shape>} {<size>} 
+% http://tex.loria.fr/ctan-doc/macros/latex/doc/html/fntguide/node11.html
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+\DeclareFixedFont{\subtitlefont}{T1}{ppl}{b}{it}{0.2in}
+
+\makeatletter                       
+\def\printauthor{%                  
+	{\large \@author}}              
+\makeatother
+\author{%
+	\textbf{Caio C\'{e}sar Carvalho Ortega} \\
+	R.A. 21038515 \\
+	\vspace*{0.2cm}
+	\textbf{Lucas Calefo} \\
+	R.A. 11116216 \\
+	\vspace*{0.2cm}
+	\textbf{Raphael Honorato Ribeiro} \\
+	R.A. 11100809 \\
+	%    Author 2 name \\
+	%    Department name \\
+	%    \texttt{email2@example.com}
+}
+
+% The following code is borrowed from: http://tex.stackexchange.com/a/86310/10898
+
+\newcommand\titlepagedecoration{%
+	\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+	
+	\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+	\coordinate (aux2) at ([yshift=-410pt]current page.north east);
+	\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+	\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+	
+	\begin{scope}[titlepagecolor!40,line width=12pt,rounded corners=12pt]
+	\draw
+	(aux1) -- coordinate (a)
+	++(225:5) --
+	++(-45:5.1) coordinate (b);
+	\draw[shorten <= -10pt]
+	(aux3) --
+	(a) --
+	(aux1);
+	\draw[opacity=0.6,titlepagecolor4,shorten <= -10pt]
+	(b) --
+	++(225:2.2) --
+	++(-45:2.2);
+	\end{scope}
+	\draw[titlepagecolor3,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+	(aux4) --
+	++(225:0.8) --
+	++(-45:0.8);
+	\begin{scope}[titlepagecolor2!70,line width=6pt,rounded corners=8pt]
+	\draw[shorten <= -10pt]
+	(aux2) --
+	++(225:3) coordinate[pos=0.45] (c) --
+	++(-45:3.1);
+	\draw
+	(aux2) --
+	(c) --
+	++(135:2.5) --
+	++(45:2.5) --
+	++(-45:2.5) coordinate[pos=0.3] (d);   
+	\draw 
+	(d) -- +(45:1);
+	\end{scope}
+	\end{tikzpicture}%
+}
+
+\begin{document}
+	\begin{titlepage}
+		
+		\noindent
+		\titlefont Política\par
+		\noindent
+		\titlefont Habitacional\par \null
+		\noindent
+		\subtitlefont Relatório\par
+		\epigraph{Epígrafe de citação}%
+		{\textit{Nome da obra, p. página}\\ \textsc{Nome Completo do Autor}}
+		\null\vfill
+		\vspace*{1cm}
+		\noindent
+		\hfill
+		\begin{minipage}{0.60\linewidth}
+			\begin{flushright}
+				\printauthor
+			\end{flushright}
+		\end{minipage}
+		%
+		\begin{minipage}{0.02\linewidth}
+			\rule{1pt}{125pt}
+		\end{minipage}
+		\titlepagedecoration
+	\end{titlepage}
+	%\lipsum[1-2]
+\end{document}
