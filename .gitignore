@@ -6,7 +6,6 @@
 /*.idx
 /*.lof
 /*.log
-/*.pdf
 /*.synctex.gz
 /*.toc
 /*.bbl
@@ -17,3 +16,5 @@
 /*.bib.bak
 /*.bib.sav
 *.tex~
+/capa.pdf
+/relatorio.pdf
