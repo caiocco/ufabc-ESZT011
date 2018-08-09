@@ -131,6 +131,11 @@ oldfontcommands,
 % http://www.tex.ac.uk/FAQ-figurehere.html
 \usepackage{longtable}
 
+% Caio - quero alternar as cores das linhas da tabela
+% https://tex.stackexchange.com/questions/107944/alternate-row-colors-in-longtable
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+
 % Caio - tentando melhorar o posicionamento das imagens
 \usepackage{float}
 
@@ -918,15 +923,38 @@ oldfontcommands,
 
 	Resumidamente, a explicação para a ocupação das áreas de mananciais da região sul de São Paulo pode ser dada pelo processo de expansão industrial da cidade, onde parte considerável dos empregos relacionados à indústria e aos serviços concentrou-se na região sul, principalmente ao longo do rio Pinheiros, onde as novas vias permitiram a implantação de um número considerável de indústrias. Os trabalhadores em busca dos novos postos de trabalho oferecidos no quadrante sul da cidade encontraram, nas áreas de mananciais, uma alternativa de moradia para suas famílias, próxima ao polo gerador de empregos. No processo contínuo de ocupação do território das bacias Guarapiranga e Billings, nos anos 1980, teve início a ocupação da península, antes isolada pelas linhas de distribuição de energia, que recebe o nome significativo de Cantinho do Céu, como melhor discutiremos na subseção \ref{ocupacao}.
 	
-	Segundo \citeonline[p.41]{Matsunaga2015}, a partir do resgate de momentos da história, verificou-se que ``o planejamento e as políticas públicas implementadas na região dos mananciais da metrópole paulistana começam a se configurar no sentido de preservação da qualidade da água para abastecimento público durante o regime ditatorial de 1964'', sendo os desdobramentos:
+	Segundo \citeonline[p.41]{Matsunaga2015}, a partir do resgate de momentos da história, verificou-se que ``o planejamento e as políticas públicas implementadas na região dos mananciais da metrópole paulistana começam a se configurar no sentido de preservação da qualidade da água para abastecimento público durante o regime ditatorial de 1964'', sendo os desdobramentos organizados na tabela \ref{tab:acoes_pos1964}:
 	
-	\begin{enumerate}
-		\item 1970: movimento social ambientalista começa a se anunciar no início da década;
-		\item 1975: promulgação da \glsdesc{lpm} (\gls{lpm});
-		\item 1987: Emenda Popular pela Reforma Urbana na Assembleia Constituinte de 1987, estabelecendo função social da propriedade e da cidade por meio dos artigos 182 e 183 da Constituição Federal de 1988;
-		\item 2001: promulgação do Estatuto da Cidade (Lei Federal n° 10.257/2001) regulamentando os artigos 182 e 183 da Constituição Federal de 1988.
-	\end{enumerate}
-
+	\begin{center}
+		\rowcolors{1}{white}{lightgray}
+		\begin{longtable}{|l|p{12cm}|}
+			\hiderowcolors
+			\caption{Desdobramentos após a ditadura militar de 1964} \label{tab:acoes_pos1964}\\
+			\hline
+			\textbf{Ano} & \textbf{Acontecimento} \\
+			\showrowcolors
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}%
+			{\tablename\ \thetable\ -- \textit{Continuado da página anterior}} \\
+			\hline
+			\hiderowcolors
+			\textbf{Ano} & \textbf{Acontecimento} \\
+			\showrowcolors
+			\hline
+			\endhead
+			\hline \multicolumn{2}{r}{\textit{Continua na próxima página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+			1970 & Movimento social ambientalista começa a se anunciar no início da década \\
+			1975 & Promulgação da \glsdesc{lpm} (\gls{lpm}) \\
+			1987 & Emenda Popular pela Reforma Urbana na Assembleia Constituinte de 1987, estabelecendo função social da propriedade e da cidade por meio dos artigos 182 e 183 da Constituição Federal de 1988 \\
+			2001 & Promulgação do Estatuto da Cidade (Lei Federal n° 10.257/2001) regulamentando os artigos 182 e 183 da Constituição Federal de 1988 \\
+		\end{longtable}
+		\legend{Elaboração própria. Fonte: \citeonline[p.41]{Matsunaga2015}}
+	\end{center}
+	
 	\section{A península do Ribeirão Cocaia} \label{peninsula}
 	
 	Contextualizando a localização das áreas de estudo na península do Ribeirão Cocaia, \citeonline[p.17]{Silva2016} aponta:
@@ -969,21 +997,44 @@ oldfontcommands,
 	
 	\subsection{O processo de ocupação} \label{ocupacao}
 	
-	Tomando como base \citeonline[p.44-45]{Matsunaga2015}, é possível elencar as seguintes ações de relevância que precederam o surgimento da área de estudo:
+	Tomando como base \citeonline[p.44-45]{Matsunaga2015}, é possível elencar as seguintes ações de relevância que precederam o surgimento da área de estudo, organizados na tabela \ref{tab:acoes_pre_ocupacao}:
 	
-	\begin{enumerate}
-		\item 1927: a região do reservatório da represa Billings recebe o nome de Interlagos;
-		\item 1932: melhoramentos viários\footnote{Vide a construção da autoestrada para Santo Amaro, denominada Autoestrada Washington Luís \cite[p.51]{Francca2000}, iniciada em 1927 e concluída em 1933, bem como uma variante desta com acesso à Cidade Satélite de Interlagos, construída em 1940 \cite[p.49]{Francca2000}} e interesses de desenvolvimento imobiliário começam a surgir junto a empreendimentos como a Riviera Paulista;
-		\item 1935: até então a região pertencia ao município de Santo Amaro, passando em seguida a integrar o município de São Paulo com propósitos econômicos;
-		\item 1938: parcelamento do solo no interflúvio das represas com padrões de cidade-jardim, dando origem ao Balneário Satélite Interlagos\footnote{Em \citeonline[p.51; p.56-57]{Francca2000} foi utilizado o termo Cidade Satélite Interlagos, em conformidade com o anteprojeto, bem como o termo Cidade Satélite Balneária de Interlagos, de forma que consideramos todos como sendo equivalentes e intercambiáveis};
-		\item 1939: o autódromo de Interlagos começa a ser construído\footnote{Conforme \citeonline[p.51]{Francca2000} o autódromo foi financiado pela S/A Autodestradas, ligada à implantação da Cidade Satélite Interlagos, que por sua vez vende o equipamento para a Comissão organizadora dos festejos do ``IV Centenário da Cidade de São Paulo'', de maneira que o autódromo passa a ser de utilidade pública em 1951};
-		\item 1940: agravamento da crise habitacional paulistana, elevando a pressão sobre os mananciais;
-		\item 1959: parcelamento de habitação popular no bairro Cidade Dutra\footnote{Contíguo à Cidade Satélite de Interlagos, conforme \citeonline[p.51]{Francca2000}} em 1959, já atrelado ao polo industrial da região de Santo Amaro;
-		\item 1960: marco do crescimento urbano paulistano, com a população atingindo 4 milhões de habitantes ante os 500 mil de 1920;
-		\item 1960: o Iateclube Santapaula realiza adaptações no Hotel Interlagos e ali se instala \cite[p.52]{Francca2000};
-		\item 1970: o poder público implanta grandes conjuntos habitacionais de interesse social nas periferias metropolitanas, contribuindo para o padrão periférico de urbanização, como o ``\gls{bnh} do Grajaú'' (Conjunto Habitacional Brigadeiro Faria Lima);
-		\item 1979: a Cidade Dutra já contava com 27 mil habitantes \cite[p.51]{Francca2000}.
-	\end{enumerate}
+	\begin{center}
+		\rowcolors{1}{white}{lightgray}
+		\begin{longtable}{|l|p{12cm}|}
+			\hiderowcolors
+			\caption[Ações relevantes anteriores ao surgimento do Cantinho do Céu]{Ações de relevância que precederam o surgimento dos bairros Parque Residencial dos Lagos e Cantinho do Céu} \label{tab:acoes_pre_ocupacao}\\
+			\hline
+			\textbf{Ano} & \textbf{Descrição da ação} \\
+			\showrowcolors
+			\hline
+			\endfirsthead
+			\multicolumn{2}{c}%
+			{\tablename\ \thetable\ -- \textit{Continuado da página anterior}} \\
+			\hline
+			\hiderowcolors
+			\textbf{Ano} & \textbf{Descrição da ação} \\
+			\showrowcolors
+			\hline
+			\endhead
+			\hline \multicolumn{2}{r}{\textit{Continua na próxima página}} \\
+			\endfoot
+			\hline
+			\endlastfoot
+			1927 & A região do reservatório da represa Billings recebe o nome de Interlagos \\
+			1932 & Melhoramentos viários\footnote{Vide a construção da autoestrada para Santo Amaro, denominada Autoestrada Washington Luís \cite[p.51]{Francca2000}, iniciada em 1927 e concluída em 1933, bem como uma variante desta com acesso à Cidade Satélite de Interlagos, construída em 1940 \cite[p.49]{Francca2000}} e interesses de desenvolvimento imobiliário começam a surgir junto a empreendimentos como a Riviera Paulista \\
+			1935 & Até então a região pertencia ao município de Santo Amaro, passando em seguida a integrar o município de São Paulo com propósitos econômicos \\
+			1938 & Parcelamento do solo no interflúvio das represas com padrões de cidade-jardim, dando origem ao Balneário Satélite Interlagos\footnote{Em \citeonline[p.51; p.56-57]{Francca2000} foi utilizado o termo Cidade Satélite Interlagos, em conformidade com o anteprojeto, bem como o termo Cidade Satélite Balneária de Interlagos, de forma que consideramos todos como sendo equivalentes e intercambiáveis} \\
+			1939 & O autódromo de Interlagos começa a ser construído\footnote{Conforme \citeonline[p.51]{Francca2000} o autódromo foi financiado pela S/A Autoestradas, ligada à implantação da Cidade Satélite Interlagos, que por sua vez vende o equipamento para a Comissão organizadora dos festejos do ``IV Centenário da Cidade de São Paulo'', de maneira que o autódromo passa a ser de utilidade pública em 1951} \\
+			1940 & Agravamento da crise habitacional paulistana, elevando a pressão sobre os mananciais \\
+			1959 & Parcelamento de habitação popular no bairro Cidade Dutra\footnote{Contíguo à Cidade Satélite de Interlagos, conforme \citeonline[p.51]{Francca2000}} em 1959, já atrelado ao polo industrial da região de Santo Amaro \\
+			1960 & Marco do crescimento urbano paulistano, com a população atingindo 4 milhões de habitantes ante os 500 mil de 1920 \\
+			1960 & O Iateclube Santapaula realiza adaptações no Hotel Interlagos e ali se instala \cite[p.52]{Francca2000} \\
+			1970 & O poder público implanta grandes conjuntos habitacionais de interesse social nas periferias metropolitanas, contribuindo para o padrão periférico de urbanização, como o ``\gls{bnh} do Grajaú'' (Conjunto Habitacional Brigadeiro Faria Lima) \\
+			1979 & A Cidade Dutra já contava com 27 mil habitantes \cite[p.51]{Francca2000} \\
+		\end{longtable}
+		\legend{Elaboração própria. Fonte: \citeonline[p.44-45]{Matsunaga2015}}
+	\end{center}
 	
 	Segundo \citeonline[p.80]{Silva2016}, o processo de ocupação definitiva da área de estudo se dá no final da década de 1980:
 		
