@@ -1,4 +1,4 @@
-O conteúdo a seguir foi adaptado do programa da disciplina, visando facilitar a utilização deste repositório. Este repositório contém apenas o relatório, composto de textos, mapas e fotos. Caso deseje acessar o relatório com os mapas, [clique aqui](https://github.com/caiocco/ufabc-ESZT011-2).
+O conteúdo a seguir foi adaptado do programa da disciplina, visando facilitar a utilização deste repositório. Este repositório contém apenas o relatório, composto de textos, mapas e fotos. Caso deseje acessar o repositório com os mapas, [clique aqui](https://github.com/caiocco/ufabc-ESZT011-2).
 
 A disciplina foi ministrada pela [Profa. Dra. Rosana Denaldi](http://cecs.ufabc.edu.br/index.php/docentes/contatos/23-docentes/159-rosana-denaldi.html).
 
