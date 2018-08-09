@@ -287,6 +287,11 @@ oldfontcommands,
 	description={Secretaria de Habitação da Prefeitura de São Paulo}
 }
 
+\newglossaryentry{sig}{
+	name={SIG},
+	description={Sistema de Informações Geográficas}
+}
+
 \newglossaryentry{smdu}{
 	name={SMDU},
 	description={Secretaria Municipal de Desenvolvimento Urbano da Prefeitura de São Paulo}
@@ -932,8 +937,7 @@ oldfontcommands,
 	
 	As áreas Cantinho do Céu, Jardim Gaivotas e Parque Residencial dos Lagos estão localizados no distrito Grajaú, na zona sul do Município de São Paulo, sob a jurisdição da Subprefeitura Capela do Socorro. Situadas na margem esquerda do reservatório Billings e distam cerca de 21 km do centro da cidade de São Paulo. O Cantinho do Céu conta com cerca de 28 mil habitantes, 8 mil famílias e 12.309 edificações seladas. A área de 1.543.761 m², é composta predominantemente por moradias de alvenaria, ocupadas por famílias de baixa renda \cite{Barda2012}, sendo que ``em 2010, 74\% da população recebia entre 0-3 salário à mínimos, o que denota uma população com renda muito baixa e que não consegue, historicamente, participar do mercado formal de habitação'' \cite[p.116]{Silva2016}, cuja maioria (51,71\%) é predominantemente jovem e possui apenas o ensino fundamental completo (82\%) \cite[p.116]{Silva2016}.
 
-	% Os mapas podem ser acessados em https://github.com/caiocco/ufabc-ESZT011-2
-	As figuras \ref*{fig:mapa_1-24000} e \ref*{fig:mapa_1-84000} correspondem aos mapas elaborados com diferentes escalas abordando a área do Cantinho do Céu e suas adjacências.
+	As figuras \ref*{fig:mapa_1-24000} e \ref*{fig:mapa_1-84000} correspondem aos mapas elaborados com diferentes escalas abordando a área do Cantinho do Céu e suas adjacências. Para a elaboração dos mapas foram utilizados dados do sistema \textit{habitaSampa mapa}, acessado por meio do endereço \url{http://mapa.habitasampa.inf.br/}; os dados descarregados eram do tipo \textit{shapefile} (extensão ``SHP'') e a importação e composição se deu por meio do \textit{software} de \gls{sig} QGIS (disponível em \url{https://www.qgis.org/pt_BR/site/}). Todos os arquivos utilizados estão disponíveis publicamente em \url{https://github.com/caiocco/ufabc-ESZT011-2}.
 
 	\begin{landscape}
 		\begin{figure}
@@ -1002,7 +1006,7 @@ oldfontcommands,
 		\caption{Imagem aérea da área do Cantinho do Céu}
 		\includegraphics[height=15cm]{img/barda_peninsula}
 		\label{fig:peninsula}
-		\legend{Fonte: \citeonline{Barda2012}}
+		\legend{Fonte: \citeonline[p.110]{Barda2012}}
 	\end{figure}
 	
 	Os dados mostrados na figura \ref{fig:peninsula}, que mostra como está estabelecida a área do Cantinho do Céu, são reproduzidos abaixo para facilitar sua observação:
@@ -1062,17 +1066,27 @@ oldfontcommands,
 		\legend{Extraído de: \citeonline[p.29]{Francca2000}}
 	\end{table}
 	
-	Em 1997, teve início a terceira etapa da primeira fase do Programa Guarapiranga, mesmo ano em que era aprovada a nova legislação de proteção dos mananciais (Lei Estadual nº 9.866/97), a qual estabelecia o Plano Emergencial, permitindo que os órgão públicos, como a Sabesp e as prefeituras implantassem ações de saneamento básico na região dos mananciais sul, desde que os bairros fizessem parte da lista de áreas precárias publicadas na legislação.
+	\citeonline[p.21]{Barda2012} oportunamente recupera o papel do Programa Guarapiranga e o relaciona com a situação da região da represa Billings e os desdobramentos posteriores, no âmbito do Programa Billings Legal:
 	
-	O Plano Emergencial produziu rápida manifestação de lideranças da região Billings, exigindo que as ações do programa de urbanização se estendessem para seus bairros. Duas das lideranças mais ativas eram do Cantinho do Céu e do Jardim Gaivotas, que participavam ativamente das reuniões do subcomitê da bacia Billings.
+	\begin{citacao}
+		``No ano de 1997, teve início a terceira etapa da primeira fase do Programa Guarapiranga, mesmo ano em que era aprovada a nova legislação de proteção dos mananciais (Lei Estadual 9.866/97), a qual estabelecia o Plano Emergencial, permitindo que os órgão públicos, como a Sabesp e as prefeituras implantassem ações de saneamento básico na região dos mananciais sul, desde que os bairros fizessem parte da lista de áreas precárias publicadas como parte integrante da legislação.
+		
+		O Plano Emergencial produziu rápida manifestação de lideranças da região Billings, exigindo que as ações do programa de urbanização se estendessem para seus bairros. Duas das lideranças mais ativas eram do Cantinho do Céu (Floripes) e do Jardim Gaivotas (Emília), que participavam ativamente das reuniões do subcomitê da bacia Billings.
+		
+		Como resposta às demandas da população por soluções para atenuar as condições precárias dos bairros irregulares da região, a \gls{sehab} preparou o Programa Billings Legal, buscando recursos financeiros para sua execução e a integração das ações com o Governo do Estado.''
+	\end{citacao}
+
+	Ainda segundo \citeonline[p.21]{Barda2012}, no diagnóstico elaborado em função do programa, ficou claro que a área do Cantinho do Céu era uma das mais carentes da cidade de São Paulo e tinha como condição crítica seu esgotamento sanitário, que ``era efetuado por meio de fossas negras, sujeitas a extravasões frequentes para as valas de drenagem irregulares de águas pluviais''.
 	
-	Como resposta às demandas da população por soluções para atenuar as condições precárias dos bairros irregulares da região, a \gls{sehab} preparou o Programa Billings Legal, buscando recursos financeiros para sua execução e a integração das ações com o Governo do Estado.
+	Quanto aos desdobramentos do Programa Billings Legal, \citeonline[p.21]{Barda2012} faz a seguinte descrição:
 	
-	No diagnóstico elaborado em função do programa, ficou claro que a área do Cantinho do Céu era uma das mais carentes da cidade de São Paulo e tinha como condição crítica seu esgotamento sanitário, que era efetuado por meio de fossas negras, sujeitas a extravasões frequentes para as valas de drenagem irregulares de águas pluviais.
+	\begin{citacao}
+		``Em 2005 foi retomado com o nome de Programa Mananciais, inicialmente uma parceria entre os governos municipal e estadual e, a partir de 2010, com recursos do governo federal.
+		
+		Nesse momento, a \gls{sehab} deu início à elaboração do novo projeto para o Cantinho do Céu, em parceria com a equipe técnica do Ministério Público, com o propósito de encontrar soluções de consenso que permitissem a permanência da maioria das famílias no local. Ao mesmo tempo se buscava a recuperação ambiental da região da península, através da implantação das redes de coleta de esgoto, sistemas de drenagem, eliminação de áreas de risco e implantação de espaços públicos.''
+	\end{citacao}
 	
-	Em 2005, o Programa Billings Legal foi retomado com o nome de Programa Mananciais, inicialmente uma parceria entre os governos municipal e estadual e, a partir de 2010, com recursos do governo federal. Nesse momento, a \gls{sehab} deu início à elaboração do novo projeto para o Cantinho do Céu, em parceria com a equipe técnica do Ministério Público, com o objetivo de promover uma recuperação ambiental na área mantendo a maioria das famílias que viviam no local.
-	
-	O projeto de urbanização da área do Cantinho do Céu se inicia no ano de 2008, com duração de quatro anos e término no final de 2012. Apenas após o processo de contratação das obras, em 2010 (dez anos depois dos primeiros estudos), o canteiro de obras e as máquinas se instalaram no Cantinho do Céu \cite{Barda2012}. Identificamos que a decisão de urbanizar surgiu como alternativa à remoção em massa das famílias, ou seja, a opção pela urbanização teve origem na frustração da ação originalmente prevista em 2002, quando a \gls{sehab} recebeu uma ordem judicial para realizar a desocupação de toda a região em 30 dias, o que se mostrou inviável devido aos cerca de 20 mil habitantes que precisariam ser removidos, o que deu início a diálogos junto ao Ministério Público para o desenvolvimento de outras alternativas que pudessem solucionar do problema habitacional da região.
+	O projeto de urbanização da área do Cantinho do Céu se inicia no ano de 2008, com duração de quatro anos e término no final de 2012. Apenas após o processo de contratação das obras, em 2010 (dez anos depois dos primeiros estudos), o canteiro de obras e as máquinas se instalaram no Cantinho do Céu \cite{Barda2012}. Identificamos que a decisão de urbanizar surgiu como alternativa à remoção em massa das famílias, ou seja, a opção pela urbanização teve origem na frustração da ação originalmente prevista em 2002, quando a \gls{sehab} recebeu uma ordem do Ministério Público para readequar urbanisticamente a região, com sua desocupação em 30 dias, o que se mostrou inviável devido aos cerca de 20 mil habitantes que precisariam ser removidos, o que deu início a diálogos junto ao Ministério Público para o desenvolvimento de outras alternativas que pudessem solucionar do problema habitacional da região. \cite[p.21]{Barda2012}
 	
 	Assim, em 2005 começa-se a traçar um plano de correção com vistas a manter a população que ali vivia, fornecendo à área toda a estrutura necessária \cite{Barda2012}; em 2008 o escritório de Arquitetura  Boldarini Arquitetura e Urbanismo inicia as obras de intervenção sobre a região.
 
@@ -1088,7 +1102,7 @@ oldfontcommands,
 	
 	\section{Objetivo do projeto}
 	
-	O objetivo do projeto era propor uma urbanização adequada sobre toda a região do Lago Azul, dotando-o de toda a infraestrutura necessária, permitindo o desenvolvimento de sua população como indivíduo e sociedade. Dentre todas as ações necessárias, pode-se citar algumas ações tomadas como estratégias de intervenção, sendo elas \cite{Archdaily2013}:
+	O objetivo do projeto era propor uma urbanização adequada sobre toda a região do Lago Azul, dotando-o de toda a infraestrutura necessária, permitindo o desenvolvimento de sua população como indivíduo e sociedade. Dentre todas as ações necessárias, pode-se citar algumas ações tomadas como estratégias de intervenção, sendo elas \cite{Archdaily2013} \cite[p.28]{Barda2012}:
 	
 	\begin{itemize}
 	    \item Preservação da vida, realizando correções em todas as áreas/habitações identificadas que apresentavam risco a segurança e saúde da população;
@@ -1097,7 +1111,7 @@ oldfontcommands,
 	    \item Geração de condições para a realização da regularização fundiária de todos os integrantes da região.
 	\end{itemize}
 	
-	Conforme \citeonline{Archdaily2013}: ``a qualificação urbana e ambiental do Cantinho do Céu, a que se propõe o projeto de urbanização, se materializa no  `tudo ao mesmo tempo', em que as ações ocorrem de forma simultânea, orquestradas pelo eixo da criação dos espaços públicos''. Sendo as intervenções esquematizadas conforme figura \ref{fig:proposta_arq}.
+	Conforme \citeonline{Archdaily2013} e \citeonline[p.28]{Barda2012}: ``a qualificação urbana e ambiental do Cantinho do Céu, a que se propõe o projeto de urbanização, se materializa no  `tudo ao mesmo tempo', em que as ações ocorrem de forma simultânea, orquestradas pelo eixo da criação dos espaços públicos''. Sendo as intervenções esquematizadas conforme figura \ref{fig:proposta_arq}\footnote{Diagrama similar também está presente em \citeonline[p.27]{Barda2012}}.
 	
 	\begin{figure}[htb]
 		\centering
@@ -1123,11 +1137,11 @@ oldfontcommands,
 		``E, ainda, temos de lembrar que houve remoções de população nesse período para a construção do parque linear que a Prefeitura chama de Cantinho do Céu, e os moradores chamam de Lago Azul, e operações de desfazimento durante a administração Kassab (2006-2008), quando	assumiu a prefeitura substituindo José Serra (2009-2012), que removeu pessoas das áreas de mananciais sem proporcionar uma solução clara para o problema da habitação (\dots)''
 	\end{citacao}
 	
-	As áreas do Lago Azul e Cantinho do Céu ficam bastante próximas, ainda que o reservatório exerça um obstáculo, que teria sido superado caso o projeto tivesse sido implantado em sua totalidade (aspecto este aprofundado no capítulo \ref{hoje}).
+	Conforme a figura \ref{fig:lago_cantinho}, as áreas do Lago Azul e Cantinho do Céu ficam bastante próximas, ainda que o reservatório exerça um obstáculo, que teria sido superado caso o projeto tivesse sido implantado em sua totalidade (aspecto este aprofundado no capítulo \ref{hoje}).
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Lago Azul e Cantinho do Céu em 30/05/2015}{À direita, o Lago Azul e, à esquerda, vista do Cantinho do Céu; no centro da foto, área do reservatório Billings, 30 de maio de 2015}
+		\caption[Lago Azul e Cantinho do Céu em 30/05/2015]{À direita, o Lago Azul e, à esquerda, vista do Cantinho do Céu; no centro da foto, área do reservatório Billings, 30 de maio de 2015}
 		\includegraphics[width=\linewidth]{img/silva_p080_lago_cantinho}
 		\label{fig:lago_cantinho}
 		\legend{Fonte: \citeonline[p.80]{Silva2016}}
@@ -1137,18 +1151,33 @@ oldfontcommands,
 
 	Para implementação do projeto algumas medidas tiveram de ser adotas para atender toda a demanda que era necessária e, simultaneamente, tornar o projeto viável.
 	
-	Devido as dificuldades apresentadas durante a elaboração do escopo de intervenção, tais como a dificuldade de uma pré-concepção de projeto devido a falta de conhecimento prévio da região e resistência da população frente ao projeto, foi desenvolvida uma metodologia para implementação em etapas concomitantes, ou seja, esta ocorreria de forma gradual e seletiva, separando em ``etapas'' todas as áreas de atuação.
+	Devido as dificuldades apresentadas durante a elaboração do escopo de intervenção, tais como a dificuldade de uma pré-concepção de projeto devido a falta de conhecimento prévio da região e resistência da população frente ao projeto, foi desenvolvida uma metodologia para implementação em etapas concomitantes, ou seja, esta ocorreria de forma gradual e seletiva, separando em etapas e partes todas as áreas de atuação. As figuras \ref{fig:barda_etapas} e \ref{fig:barda_trecho_reslagos} ilustram tal abordagem.
 	
-	Esta medida favoreceu, principalmente, no aceite por parte da população, que foi capaz de visualizar a evolução gradual do processo e também participar de toda a estruturação que estava ocorrendo em sua região. Além deste fato, esta medida possibilitou a equipe de desenvolver e implementar tecnologias específicas em cada região, como por exemplo o asfalto que cobria as rodovias. Como cada região apresentava um tipo de tipologia, inclinação e estrutura do solo, cada região apresentava um tipo de asfalto que melhor se adaptava a estas condições. Para um exemplo de soluções adotadas numa das ruas do Parque Residencial dos Lagos, consulta a figura \ref{fig:solucoes}.
+	Esta medida favoreceu, principalmente, no aceite por parte da população, que foi capaz de visualizar a evolução gradual do processo e também participar de toda a estruturação que estava ocorrendo em sua região. Além deste fato, esta medida possibilitou a equipe de desenvolver e implementar tecnologias específicas em cada região, como por exemplo o asfalto que cobria as rodovias. Como cada região apresentava um tipo de tipologia, inclinação e estrutura do solo, cada região apresentava um tipo de asfalto que melhor se adaptava a estas condições. Para um exemplo de soluções adotadas numa das ruas do Parque Residencial dos Lagos, consulte a figura \ref{fig:solucoes}.
+
+	\noindent
+	\begin{minipage}[b]{.53\textwidth}
+		\captionof{figure}{Cantinho do Céu -- divisão de obras em etapas}
+		\includegraphics[width=\linewidth]{img/barda_etapas}
+		\label{fig:barda_etapas}
+		\legend{Fonte: \citeonline[p.117]{Barda2012}}
+	\end{minipage}%
+	\hfill
+	\begin{minipage}[b]{.4\linewidth}
+		\captionof{figure}{Residencial dos Lagos -- divisão das obras em partes}
+		\includegraphics[width=\textwidth]{img/barda_trecho_reslagos}
+		\label{fig:barda_trecho_reslagos}
+		\legend{Fonte: \citeonline[p.117]{Barda2012}}
+	\end{minipage}
 	
 	Por fim, executar o projeto em etapas permitiu a tomada de soluções em questão do cronograma financeiro e as aprovações do projeto. A solução adotada pela equipe foi atuar e ajustar o cronograma financeiro conforme as etapas eram aprovadas pelos órgãos públicos \cite{Barda2012}.
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Soluções adotadas na rua Casa do João de Barro}
+		\caption[Soluções adotadas na rua Casa do João de Barro]{Rua Casa do João de Barro: solução tipo de infraestrutura e sistema tipo de drenagem, julho de 2008}
 		\includegraphics[width=\linewidth]{img/barda_solucoes}
 		\label{fig:solucoes}
-		\legend{Fonte: \citeonline{Barda2012}}
+		\legend{Fonte: \citeonline[p.120]{Barda2012}}
 	\end{figure}
 	
 	% ------------------------------------------------------------
@@ -1178,7 +1207,7 @@ oldfontcommands,
 	    Francisco Lopes Solano, onde foram feitas obras de infraestrutura para receber o parque linear que chegaria ao Cantinho do Céu, mas que, segundo seus moradores, foi feito no Lago Azul, não tendo chegado na área onde realmente está localizado o Cantinho do Céu.
     \end{citacao}
     
-    Ou seja, podemos concluir que a maior parte do bairro não foi contemplada com áreas de infraestrutura. O projeto não deixa de ser louvável do ponto de vista arquitetônico, muito menos pelos desafios encontrados na compatibilização de diferentes elementos da maquinaria do Estado, no entanto, trata-se de uma falha a ser observada, visto que o projeto não foi completamente implantado.
+    Ou seja, podemos concluir que a maior parte do bairro não foi contemplada com áreas de infraestrutura. O projeto não deixa de ser louvável do ponto de vista arquitetônico, muito menos pelos desafios encontrados na compatibilização de diferentes elementos da maquinaria do Estado ----- conforme \citeonline[p.121]{Barda2012} ``a preparação e a execução do Programa Mananciais são de responsabilidade dos três níveis de governo, contando com a participação da comunidade e de outros agentes da sociedade civil'' -----, no entanto, trata-se de uma falha a ser observada, visto que o projeto não foi completamente implantado.
 	
 	\section{Visita de campo} \label{visita}
 	
@@ -1196,7 +1225,7 @@ oldfontcommands,
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Lago Azul e Cantinho do Céu em 14/07/2018}{Observando o Cantinho do Céu a partir de trecho parcialmente construído do Parque Linear Cantinho do Céu, na área conhecida por Lago Azul pela comunidade, 14 de julho de 2018}
+		\caption[Lago Azul e Cantinho do Céu em 14/07/2018]{Observando o Cantinho do Céu a partir de trecho parcialmente construído do Parque Linear Cantinho do Céu, na área conhecida por Lago Azul pela comunidade, 14 de julho de 2018}
 		\includegraphics[width=\linewidth]{img/visita_borda_lago_azul_cantinho}
 		\label{fig:borda_critica}
 		\legend{Elaboração própria}
