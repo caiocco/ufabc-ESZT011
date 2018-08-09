@@ -2,7 +2,7 @@
 %
 % Abaixo seguem orientações originais do modelo utilizado.
 %
-% Siga para o conteúdo do trabalho descendo até a linha 867
+% Siga para o conteúdo do trabalho descendo até a linha 908.
 %
 % ==============================================================
 %
@@ -295,6 +295,11 @@ oldfontcommands,
 \newglossaryentry{sig}{
 	name={SIG},
 	description={Sistema de Informações Geográficas}
+}
+
+\newglossaryentry{pdf}{
+	name={PDF},
+	description={Portable Document Format}
 }
 
 \newglossaryentry{smdu}{
@@ -907,13 +912,25 @@ oldfontcommands,
 	
 	\chapter{Introdução}
 	
-	O propósito do presente trabalho é realizar um relatório acerca da reurbanização da área do Cantinho do Céu, na capital paulista, como parte das atividades que integram a disciplina de Política Habitacional (ESZT011). Para tanto, foram utilizadas fontes secundárias, entre elas materiais de caráter institucional da municipalidade, teses de mestrado e fotografias de \textit{sites} na Internet.
+	O propósito do presente trabalho é realizar um relatório acerca da reurbanização da área do Cantinho do Céu, na capital paulista, como parte das atividades que integram a disciplina de Política Habitacional (ESZT011).
 	
 	Este trabalho está subdividido de forma a abordar primeiramente as áreas de mananciais nas quais se situa a favela que sofreu o processo de intervenção e, em seguida, a favela antes e depois do processo, incluindo observações oriundas de uma visita de campo intermediada por moradoras do distrito do Grajaú de alguma maneira ligadas ao círculo social de um dos integrantes do grupo, o que permitiu a visitação ao longo do parque linear.
 	
+	\section{Metodologia}
+	
+	Esta seção fornece breves esclarecimentos sobre a metodologia que norteou a elaboração deste relatório.
+	
+	Para o indispensável processo de revisão bibliográfica, foram utilizadas fontes secundárias, entre elas materiais de caráter institucional da municipalidade, teses de mestrado e fotografias de \textit{sites} na Internet.
+	
+	Para a elaboração dos mapas foram utilizados dados do sistema \textit{habitaSampa mapa}, acessado por meio do endereço \url{http://mapa.habitasampa.inf.br/}; os dados descarregados eram do tipo \textit{shapefile} (extensão ``SHP'') e a importação e composição se deu por meio do \textit{software} de \gls{sig} QGIS (disponível em \url{https://www.qgis.org/pt_BR/site/}). Todos os arquivos utilizados estão disponíveis publicamente em \url{https://github.com/caiocco/ufabc-ESZT011-2}.
+
+	O código-fonte (\textit{source code}) deste relatório e sua capa em \LaTeX, bem como as figuras nele utilizadas, estão disponíveis em \url{https://github.com/caiocco/ufabc-ESZT011}. O endereço também abriga versões compiladas em formato \gls{pdf} deste relatório e sua capa, com o intuito de facilitar a visualização.
+	
+	Para a realização das fotografias durante a visita de campo foi utilizada a câmera do \textit{smartphone} iPhone 6s. As fotografias presentes neste relatório tiveram a escala reduzida em aproximadamente 50\%, sofrendo ainda um corte na vertical, de forma a buscar a reduzir a presença do céu e otimizar o uso do espaço da página. O tratamento das fotografias se deu por meio do \textit{software} The GIMP, disponível em \url{https://www.gimp.org/}.
+	
 	\chapter{A questão dos mananciais}
 	
-	\subsection{Modificação da paisagem} \label{light}
+	\section{Modificação da paisagem} \label{light}
 	
 	A The São Paulo Tramway, Light \& Power Co., empresa de origem canadense, conhecida e a partir daqui também denominada por Light, é autorizada a operar e se instala no município de São Paulo em 1899, a partir daí, envolve-se com concessões de serviços de iluminação pública a gás, abastecimento de água, rede de esgotos e linhas de bonde (a tração animal ou a vapor), por meio de um processo de absorção entre firmas e posterior aquisição pela própria Light.
 	
@@ -973,27 +990,7 @@ oldfontcommands,
 		
 	Com relação ao perfil de renda das famílias, ``em 2010, 74\% da população recebia entre 0-3 salário à mínimos, o que denota uma população com renda muito baixa e que não consegue, historicamente, participar do mercado formal de habitação'' \cite[p.116]{Silva2016}, cuja maioria (51,71\%) é predominantemente jovem e possui apenas o ensino fundamental completo (82\%) \cite[p.116]{Silva2016}.
 
-	As figuras \ref*{fig:mapa_1-24000} e \ref*{fig:mapa_1-84000} correspondem aos mapas elaborados com diferentes escalas abordando a área do Cantinho do Céu e suas adjacências. Para a elaboração dos mapas foram utilizados dados do sistema \textit{habitaSampa mapa}, acessado por meio do endereço \url{http://mapa.habitasampa.inf.br/}; os dados descarregados eram do tipo \textit{shapefile} (extensão ``SHP'') e a importação e composição se deu por meio do \textit{software} de \gls{sig} QGIS (disponível em \url{https://www.qgis.org/pt_BR/site/}). Todos os arquivos utilizados estão disponíveis publicamente em \url{https://github.com/caiocco/ufabc-ESZT011-2}.
-
-	\begin{landscape}
-		\begin{figure}
-			\centering
-			\caption{Cantinho do Céu e Adjacências (escala 1:2400)}
-			\includegraphics[height=14cm,keepaspectratio]{img/mapa_1-24000}
-			\label{fig:mapa_1-24000}
-			\legend{Elaboração própria}
-		\end{figure}
-	\end{landscape}
-	
-	\begin{landscape}
-		\begin{figure}
-			\centering
-			\caption{Cantinho do Céu e Adjacências (escala 1:8400)}
-			\includegraphics[height=14cm,keepaspectratio]{img/mapa_1-84000}
-			\label{fig:mapa_1-84000}
-			\legend{Elaboração própria}
-		\end{figure}
-	\end{landscape}
+	O final do capítulo conta com as figuras \ref*{fig:mapa_1-24000} e \ref*{fig:mapa_1-84000}, que correspondem aos mapas elaborados em diferentes escalas representando cartograficamente a área do Cantinho do Céu e suas adjacências.
 	
 	\subsection{O processo de ocupação} \label{ocupacao}
 	
@@ -1122,10 +1119,30 @@ oldfontcommands,
 		\label{fig:fotos_antes_03}
 		\legend{Fonte: \citeonline{Archdaily2013}, direitos reservados a Fábio Knoll}
 	\end{figure}
+
+	\begin{landscape}
+		\begin{figure}
+			\centering
+			\caption{Cantinho do Céu e Adjacências (escala 1:2400)}
+			\includegraphics[height=14cm,keepaspectratio]{img/mapa_1-24000}
+			\label{fig:mapa_1-24000}
+			\legend{Elaboração própria}
+		\end{figure}
+	\end{landscape}
 	
-	\chapter{Projeto de intervenção}
+	\begin{landscape}
+		\begin{figure}
+			\centering
+			\caption{Cantinho do Céu e Adjacências (escala 1:8400)}
+			\includegraphics[height=14cm,keepaspectratio]{img/mapa_1-84000}
+			\label{fig:mapa_1-84000}
+			\legend{Elaboração própria}
+		\end{figure}
+	\end{landscape}
 	
-	Como vimos nas subseções \ref{light} e \ref{ocupacao}, ainda que sumarizados e resumidos, os desdobramentos que levaram à ocupação e posterior urbanização do Cantinho do Céu foram muitos, no entanto, como ponto de partida para entendimento das ações de urbanização, pode ser citado o Programa Guarapiranga, que foi iniciado em 1990, devido à realidade da ocupação irregular das áreas de mananciais, bem como ao agravamento da qualidade das águas do reservatório. O programa foi constituído por um conjunto de intervenções de infraestrutura, sumarizadas na figura \ref*{tab:francca_programa}. Podemos compreender a seguir a justificativa para o programa, conforme \citeonline[p.27-28]{Francca2000}:
+	\chapter{O projeto de intervenção}
+	
+	Como vimos na seção \ref{light} e na subseção \ref{ocupacao}, ainda que sumarizados e resumidos, os desdobramentos que levaram à ocupação e posterior urbanização do Cantinho do Céu foram muitos, no entanto, como ponto de partida para entendimento das ações de urbanização, pode ser citado o Programa Guarapiranga, que foi iniciado em 1990, devido à realidade da ocupação irregular das áreas de mananciais, bem como ao agravamento da qualidade das águas do reservatório. O programa foi constituído por um conjunto de intervenções de infraestrutura, sumarizadas na tabela \ref*{tab:francca_programa}. Podemos compreender a seguir a justificativa para o programa, conforme \citeonline[p.27-28]{Francca2000}:
 	
 	\begin{citacao}
 		``No período 1977/89, a qualidade da água do reservatório piorava, ameaçando o abastecimento público proporcionado pelo Sistema Guarapiranga; neste particular os anos de 1990 e 1991 foram críticos. Diante desta situação e a partir da experiência integrada das ações de fiscalização do SOS Mananciais, iniciou-se, em 1991, a preparação de um programa de atividades que tinha como objetivo central a recuperação da qualidade das águas do manancial para o abastecimento público. Os trabalhos iniciais foram conduzidos pela \gls{sabesp} -- \glsdesc{sabesp}, com participação da então Secretaria Nacional de Saneamento do Ministério da Ação Social, hoje extintos, e com o apoio do \glsdesc{bird} -- \gls{bird}, dentro de um programa de ações mais amplo, que envolvia as regiões metropolitanas de Belo Horizonte e Curitiba.''
@@ -1136,13 +1153,13 @@ oldfontcommands,
 		\caption{Programa de Saneamento Ambiental da Bacia do Guarapiranga}
 		\includegraphics[width=\linewidth]{img/francca_p029_tabela_programa}
 		\label{tab:francca_programa}
-		\legend{Extraído de: \citeonline[p.29]{Francca2000}}
+		\legend{Origem: \citeonline[p.29]{Francca2000}}
 	\end{table}
 	
 	\citeonline[p.21]{Barda2012} oportunamente recupera o papel do Programa Guarapiranga e o relaciona com a situação da região da represa Billings e os desdobramentos posteriores, no âmbito do Programa Billings Legal:
 	
 	\begin{citacao}
-		``No ano de 1997, teve início a terceira etapa da primeira fase do Programa Guarapiranga, mesmo ano em que era aprovada a nova legislação de proteção dos mananciais (Lei Estadual 9.866/97), a qual estabelecia o Plano Emergencial, permitindo que os órgão públicos, como a Sabesp e as prefeituras implantassem ações de saneamento básico na região dos mananciais sul, desde que os bairros fizessem parte da lista de áreas precárias publicadas como parte integrante da legislação.
+		``No ano de 1997, teve início a terceira etapa da primeira fase do Programa Guarapiranga, mesmo ano em que era aprovada a nova legislação de proteção dos mananciais (Lei Estadual 9.866/97), a qual estabelecia o Plano Emergencial, permitindo que os órgão públicos, como a \gls{sabesp} e as prefeituras implantassem ações de saneamento básico na região dos mananciais sul, desde que os bairros fizessem parte da lista de áreas precárias publicadas como parte integrante da legislação.
 		
 		O Plano Emergencial produziu rápida manifestação de lideranças da região Billings, exigindo que as ações do programa de urbanização se estendessem para seus bairros. Duas das lideranças mais ativas eram do Cantinho do Céu (Floripes) e do Jardim Gaivotas (Emília), que participavam ativamente das reuniões do subcomitê da bacia Billings.
 		
@@ -1163,7 +1180,7 @@ oldfontcommands,
 	
 	Conforme \citeonline[p.116]{Barda2012}, ``a partir de 2005, começamos a trabalhar e idealizamos um plano conjunto com vistas a manter a população que ali vivia, dotando a área da estrutura necessária''; em 2008 o escritório de Arquitetura  Boldarini Arquitetura e Urbanismo inicia as obras de intervenção sobre a região.
 
-	Eventos-chave, como os que abriram este capítulo, bem como outros elencados no capítulo \ref{light}, encontram-se sumarizados na figura \ref*{fig:cronologia}. Adicionalmente, uma consolidação mais abrangente, incluindo aspectos ligados ao marco regulatório e formatação institucional foi elaborado por \citeonline{Matsunaga2015} em uma linha do tempo que visa ``elucidar o processo nas diversas escalas'' \cite[p.37]{Matsunaga2015}, conforme podemos ver na figura \ref*{fig:matsunaga_linha}.
+	Eventos-chave, como os que abriram este capítulo, bem como outros elencados no capítulo \ref{light}, encontram-se sumarizados na figura \ref*{fig:cronologia}. Adicionalmente, uma consolidação mais abrangente, incluindo aspectos ligados ao marco regulatório e formatação institucional foi elaborado por \citeonline{Matsunaga2015} em uma linha do tempo que visa ``elucidar o processo nas diversas escalas'' \cite[p.37]{Matsunaga2015}, conforme podemos ver na figura \ref*{fig:matsunaga_linha}, disponível na última página deste capítulo.
 	
 	\begin{figure}[htb]
 		\centering
@@ -1198,13 +1215,13 @@ oldfontcommands,
 	
 	Como todo o projeto de intervenção e adequação de favelas, o projeto do Cantinho do Céu também apresentou dificuldade de concepção durante todo o período de implementação.
 	
-	A primeira dificuldade apresentou-se quanto a recepção da própria população do local. Em primeiro momento a população mostrava certa resistência frente ao programa, alegando que não era primeira promessa de melhoria do local e que, como a anterior, também não seria cumprida conforme prometido. Porém, com o avanço do projeto e as melhorias ganhando destaque na região, a população passa a aceitar mais ao programa e a interagir mais com as equipes, aumentando a aproximação entre as partes.
+	A primeira dificuldade apresentou-se quanto a recepção da própria população do local. Em primeiro momento a população mostrava certa resistência frente ao programa, alegando que não era a primeira promessa de melhoria do local e que, como a anterior, também não seria cumprida conforme prometido. Porém, com o avanço do projeto e as melhorias ganhando destaque na região, a população passa a aceitar mais ao programa e a interagir mais com as equipes, aumentando a aproximação entre as partes.
 	
 	Quanto à região, o projeto enfrentou dificuldade a respeito de sua topologia devido a sua declividade acentuada e a desordenada implementação que ocorrera no bairro ao longo dos anos. Estes fatores dificultaram o processo de implementação das redes de esgoto e da malha viária. Para a realização desta atividade foi necessário que cerca de 10\% das famílias fossem removidas para outras regiões, permitindo o acesso e início de obras. 
 	
-	Ressalta-se ainda dificuldade frente aos órgãos públicos para a concepção do projeto. Para a realização da intervenção, se fez necessário integração da Secretaria do Verde e Meio Ambiente, das secretarias da Educação e Saúde; do Governo do Estado participaram a Secretaria de Saneamento, Secretaria de Meio Ambiente e Sabesp. Segundo Ricardo Sampaio, engenheiro integrante da equipe de intervenção, realizar o trabalho integrado entre todos os órgãos e secretarias atuantes sobre o projeto mostrou-se como um dos maiores desafios enfrentados pela equipe \cite[p.121]{Barda2012}.
+	Ressalta-se ainda dificuldade frente aos órgãos públicos para a concepção do projeto. Para a realização da intervenção, se fez necessário integração da Secretaria do Verde e Meio Ambiente, das secretarias da Educação e Saúde; do Governo do Estado participaram a Secretaria de Saneamento, Secretaria de Meio Ambiente e \gls{sabesp}. Segundo Ricardo Sampaio, engenheiro integrante da equipe de intervenção, realizar o trabalho integrado entre todos os órgãos e secretarias atuantes sobre o projeto mostrou-se como um dos maiores desafios enfrentados pela equipe \cite[p.121]{Barda2012}.
 	
-	Finalmente, \citeonline[p.93]{Silva2016} faz uma crítica ao projeto engendrado pelo poder público, citando as remoções e considerando que não foi fornecida uma solução clara para o problema da habitação, além de destacar a assimetria ligada à apropriação do lugar, com nomes díspares entre população e poder público, elemento este que inclusive provocou confusão quando da realização deste relatório:
+	Finalmente, \citeonline[p.93]{Silva2016} faz uma crítica ao projeto engendrado pelo poder público, citando as remoções e considerando que não foi fornecida uma solução clara para o problema da habitação, além de destacar a assimetria ligada à apropriação do lugar, com nomes díspares entre população e poder público\footnote{Para uma discussão sobre a toponímia ligada aos bairros da península, consultar \citeonline[p.71-100]{Matsunaga2015}}, elemento este que inclusive provocou confusão quando da realização deste relatório:
 	
 	\begin{citacao}
 		``E, ainda, temos de lembrar que houve remoções de população nesse período para a construção do parque linear que a Prefeitura chama de Cantinho do Céu, e os moradores chamam de Lago Azul, e operações de desfazimento durante a administração Kassab (2006-2008), quando	assumiu a prefeitura substituindo José Serra (2009-2012), que removeu pessoas das áreas de mananciais sem proporcionar uma solução clara para o problema da habitação (\dots)''
@@ -1220,7 +1237,7 @@ oldfontcommands,
 		\legend{Fonte: \citeonline[p.80]{Silva2016}}
 	\end{figure}
 	
-	\section{Algumas soluções adotadas}
+	\section{Algumas soluções adotadas} \label{solucoes}
 
 	Para implementação do projeto algumas medidas tiveram de ser adotadas para atender toda a demanda que era necessária e, simultaneamente, tornar o projeto viável.
 	
@@ -1265,7 +1282,7 @@ oldfontcommands,
 		\end{figure}
 	\end{landscape}
 	
-	\chapter{Situação atual} \label{hoje}
+	\chapter{Compreendendo a situação atual} \label{hoje}
 	
 	Para \citeonline[115]{Silva2016}, ``esse parque evidencia uma das maiores contradições que ainda não foram resolvidas pelas políticas públicas: a preservação do meio ambiente e a questão das habitações nesses lugares''. De fato, é inegável que a população ali residente tem elevada proximidade das águas do reservatório, o que cria uma delicada relação entre o meio-ambiente e a interferência antrópica. Ainda conforme \citeonline[p.114]{Silva2016}, a implantação do parque linear foi realizada em parte da orla da península, algo citado pela moradora que realizou o acompanhamento durante a visita de campo (ver seção \ref{visita}).
 	
@@ -1276,17 +1293,16 @@ oldfontcommands,
     A assimetria devido à descontinuidade na implantação do parque linear também foi apontada por \citeonline[p.102]{Silva2016}, que realizou visita de campo e esteve em contato com Josiane, que identificou como líder comunitária:
     
     \begin{citacao}
-		Já no Cantinho do Céu, o bairro se divide nitidamente na metade da rua
-	    Francisco Lopes Solano, onde foram feitas obras de infraestrutura para receber o parque linear que chegaria ao Cantinho do Céu, mas que, segundo seus moradores, foi feito no Lago Azul, não tendo chegado na área onde realmente está localizado o Cantinho do Céu.
+		Já no Cantinho do Céu, o bairro se divide nitidamente na metade da rua Francisco Lopes Solano, onde foram feitas obras de infraestrutura para receber o parque linear que chegaria ao Cantinho do Céu, mas que, segundo seus moradores, foi feito no Lago Azul, não tendo chegado na área onde realmente está localizado o Cantinho do Céu.
     \end{citacao}
     
     Ou seja, podemos concluir que a maior parte do bairro não foi contemplada com áreas de infraestrutura. O projeto não deixa de ser louvável do ponto de vista arquitetônico, muito menos pelos desafios encontrados na compatibilização de diferentes elementos da maquinaria do Estado ----- conforme \citeonline[p.121]{Barda2012} ``a preparação e a execução do Programa Mananciais são de responsabilidade dos três níveis de governo, contando com a participação da comunidade e de outros agentes da sociedade civil'' -----, no entanto, trata-se de uma falha a ser observada, visto que o projeto não foi completamente implantado.
 	
 	\section{Visita de campo} \label{visita}
 	
-	A visita de campo foi realizada no período vespertino, em 14/07/2018. A visita foi viabilizada pela Anetilde, professora municipal da rede pública de ensino, conhecida por Gigi, que por sua vez é diretora da rede pública de ensino e está lotada numa escola do distrito, além de ser irmã do meio de Maria, que é namorada de Caio César, um dos integrantes do grupo responsável por este relatório. Coincidentemente, exceto por Caio César, todos os atores são habitantes de longa data da Zona Sul e suas vidas foram ou continuam sendo marcadas pelo contato com o multifacetado distrito do Grajaú.
+	A visita de campo foi realizada no período vespertino, em 14/07/2018, iniciando-se por volta das 12h45 e encerrando-se por volta das 13h58, tendo sido viabilizada pela Anetilde, professora municipal da rede pública de ensino, conhecida por Gigi, que por sua vez é diretora da rede pública de ensino e está lotada numa escola do distrito, além de ser irmã do meio de Maria, que é namorada de Caio César, um dos integrantes do grupo responsável por este relatório. Coincidentemente, exceto por Caio César, todos os atores são habitantes de longa data da Zona Sul e suas vidas foram ou continuam sendo marcadas pelo contato com o multifacetado distrito do Grajaú.
 	
-	Para realizar a visita, Caio César se dirigiu à Estação Tatuapé (linhas ) utilizando a linha de ônibus 3763-10 e realizou o trajeto entre ela e a Estação Autódromo utilizando as linhas 11, 4 e 9 do sistema metroferroviário. A partir da Estação Autódromo da \gls{cptm}, o trajeto foi feito com o carro da Gigi, que se dirigiu até a residência de Anetilde. A partir dali, fomos recebidos por Anetilde, seus filhos em idade infantil (um menino e duas meninas gêmeas), sua mãe e seu marido. Anetilde, Gigi, Maria e Caio percorreram então toda a extensão do Parque Linear Cantinho do Céu. Foram realizadas conversas entre Caio e Anetilde, de maneira a melhor compreender a região do Lago Azul e do Parque Residencial dos Lagos, bem como o Cantinho do Céu, além disso, foram capturadas centenas de fotografias do percurso, para posterior referência.
+	Para realizar a visita, Caio César se dirigiu à Estação Tatuapé (linhas 3-Vermelha da \gls{cmsp}, 11-Coral e 12-Safira da \gls{cptm}) utilizando a linha de ônibus 3763-10 e realizou o trajeto entre ela e a Estação Autódromo (linha 9-Esmeralda da \gls{cptm}) utilizando as linhas 11-Coral, 4-Amarela e 9-Esmeralda do sistema metroferroviário. A partir da Estação Autódromo da \gls{cptm}, o trajeto foi feito com o carro da Gigi, que conduziu até a residência de Anetilde. A partir dali, Caio César, Gigi e Maria foram recebidos por Anetilde, seus filhos em idade infantil (um menino e duas meninas gêmeas), sua mãe e seu marido. Anetilde, Caio César, Gigi e Maria percorreram então toda a extensão do Parque Linear Cantinho do Céu. Foram realizadas conversas entre Caio César e Anetilde, de maneira a melhor compreender a região do Lago Azul e do Parque Residencial dos Lagos, bem como o Cantinho do Céu, além disso, foram capturadas centenas de fotografias do percurso, para posterior referência.
 	
 	Durante a visita de campo evidenciou-se o apontamento feito por \citeonline[p.94]{Silva2016} acerca da área conhecida pela população como Cantinho do Céu, fronteiriça à área conhecida pela população como Lago Azul, correspondente ao parque linear:
 	
@@ -1310,7 +1326,55 @@ oldfontcommands,
 		``O parque linear em si não é o problema, nem tampouco soluciona o problema. No máximo, ele poderia ser parte da solução, uma vez que desapropriar e fazer o parque pode resolver um problema pontual; porém, sem o encaminhamento adequado para a questão habitacional não há como resolver a situação da área de proteção de mananciais.''
 	\end{citacao}
 	
-	Durante a visita de campo evidenciou-se que o parque linear é apropriado pela população, que o utiliza como área de lazer. \citeonline[p.117]{Silva2016} aponta que ``o argumento para remoções está baseado na defesa da água e do meio ambiente de uma maneira geral, além da necessidade de áreas de lazer especialmente nas periferias e para as comunidades carentes'', ao que considera que os argumentos são de grande consistência, mas que também são utilizados para remover populações, mesmo quando há posse da terra, o que agrava o processo de especulação imobiliária inerente ao capitalismo e expulsão dos mais pobres \cite[p.118]{Silva2016}. Durante a visita de campo, Anetilde explica que os moradores do Parque Residencial dos Lagos detinham a posse da terra, ainda que existissem problemas de regularização fundiária ligados ao loteamento em \glsdesc{apm}, sendo assim, aponta que ex-moradores venderam seus imóveis e buscaram realocar-se dentro do Parque Residencial dos Lagos ou ainda dentro do distrito do Grajaú.
+	Durante a visita de campo evidenciou-se que o parque linear é apropriado pela população, que o utiliza como área de lazer. \citeonline[p.117]{Silva2016} aponta que ``o argumento para remoções está baseado na defesa da água e do meio ambiente de uma maneira geral, além da necessidade de áreas de lazer especialmente nas periferias e para as comunidades carentes'', ao que considera que os argumentos são de grande consistência, mas que também são utilizados para remover populações, mesmo quando há posse da terra, o que agrava o processo de especulação imobiliária inerente ao capitalismo e expulsão dos mais pobres \cite[p.118]{Silva2016}. Durante a visita de campo, Anetilde explica que os moradores do Parque Residencial dos Lagos detinham a posse da terra, ainda que existissem problemas de regularização fundiária ligados ao loteamento em \glsdesc{apm}, sendo assim, comenta que ex-moradores venderam seus imóveis e buscaram realocar-se dentro do Parque Residencial dos Lagos ou ainda dentro do distrito do Grajaú.
+	
+	Chamou também a atenção o bom estado do parque em geral, incluindo os \textit{decks} em madeira (figura \ref{fig:pier}), além disso, foi possível visitar o Espaço Meninos da Billings (figura \ref{fig:meninos_remada}), organizado pelo ``Ferrugem'', que promove entre outras atividades, a ``Remada na quebrada'', que visa aumentar o contato de jovens e adultos com as águas da Billings. Segundo ``Ferrugem'' há ações que envolvem também a degustação de café orgânico plantado na região e viagens de barco a motor entre o Parque Residencial dos Lagos e o município de São Bernardo do Campo.
+
+	\begin{figure}[htb]
+		\centering
+		\caption[Deck de madeira em 14/07/2018]{Entre as ruas Pavão Dourado e Beija-flor de Cactus: deck de madeira no Parque Linear Cantinho do Céu, na área conhecida por Lago Azul pela comunidade, 14 de julho de 2018}
+		\includegraphics[width=\linewidth]{img/visita_pier}
+		\label{fig:pier}
+		\legend{Elaboração própria}
+	\end{figure}
+	
+	\begin{figure}[htb]
+		\centering
+		\caption[Espaço Meninos da Billings em 14/07/2018]{Rua Beija-flor de Cactus: Espaço Meninos da Billings no Parque Linear Cantinho do Céu, na área conhecida por Lago Azul pela comunidade, 14 de julho de 2018}
+		\includegraphics[width=\linewidth]{img/visita_meninos}
+		\label{fig:meninos_remada}
+		\legend{Elaboração própria}
+	\end{figure}
+	
+	Outro aspecto que se destacou foi a presença de grama sintética na quadra de futebol próximo do início do parque linear (figura \ref{fig:futebol}). Segundo Anetilde, um influente vereador da Câmara Municipal de São Paulo instala grama sintética nos campos de futebol em todo o distrito do Grajaú, como forma de tentar angariar votos. Nas proximidades da mesma quadra há instalações de vigilância terceirizada contratada pela municipalidade (figura \ref{fig:vigilancia}). Também foi possível identificar a solução de drenagem mencionada na subseção \ref{solucoes} (figura \ref{fig:drenagem}).
+		
+	\begin{figure}[htb]
+		\centering
+		\caption[Quadra de futebol em 14/07/2018]{Rua João Bernardo Mendonça: observando a quadra de futebol no início do Parque Linear Cantinho do Céu, na área conhecida por Lago Azul pela comunidade, 14 de julho de 2018}
+		\includegraphics[width=\linewidth]{img/visita_futebol}
+		\label{fig:futebol}
+		\legend{Elaboração própria}
+	\end{figure}
+
+	\begin{figure}[htb]
+		\centering
+		\caption[Cabine de vigilância em 14/07/2018]{Rua João Bernardo Mendonça: observando a cabine de vigilância nas proximidades da quadra de futebol, na área conhecida por Lago Azul pela comunidade, 14 de julho de 2018}
+		\includegraphics[width=\linewidth]{img/visita_vigilancia}
+		\label{fig:vigilancia}
+		\legend{Elaboração própria}
+	\end{figure}
+
+	\begin{figure}[htb]
+		\centering
+		\caption[Exemplo do sistema tipo de drenagem em 14/07/2018]{Rua João Bernardo Mendonça: observando o sistema tipo de drenagem no início do Parque Linear Cantinho do Céu, na área conhecida por Lago Azul pela comunidade, 14 de julho de 2018}
+		\includegraphics[width=\linewidth]{img/visita_drenagem}
+		\label{fig:drenagem}
+		\legend{Elaboração própria}
+	\end{figure}
+	
+	Ainda que tenha atraído alguns olhares, realização das fotografias em nenhum momento ensejou reações negativas de qualquer indivíduo que estivesse presente. Buscou-se manter discrição e evitar fotografar crianças e, quando fotografados adolescentes e adultos, buscou-se estabelecer o foco da câmera na paisagem e não em seus rostos\footnote{Por conseguinte, no caso da figura \ref{fig:futebol}, os rostos também foram desfocados}.
+	
+	Por fim, a visita de campo foi uma oportunidade valiosa, que contribuiu para facilitar a elaboração deste relatório e, sobretudo, permitiu uma melhor compreensão dos bairros Parque Residencial dos Lagos e Cantinho do Céu e da magnitude das intervenções de urbanização. Cabe também salientar que sem a colaboração das três mulheres citadas no início desta seção, a visita provavelmente não teria sido possível. Registramos aqui nossos agradecimentos a Anetilde, Gigi e Maria, que cederam preciosas horas de um sábado ensolarado para percorrer toda a extensão do parque linear a pé.
 	
 	%===============================================================================
 	%
